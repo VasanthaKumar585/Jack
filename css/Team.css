@@ -1,0 +1,654 @@
+:root {
+    --transition-duration: 0.8s;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root {
+--primary: #0c0074;
+--secondary: #757575;
+--light: #F3F6F8;
+--dark: #0C2B4B;
+
+/* Dynamically adjusting heights */
+--top-bar-height: clamp(40px, 5vw, 60px); /* Min 35px, responsive, max 60px */
+--min-font-size: clamp(2vw, 2.2vw, 2.3vw);
+--navbar-height: clamp(40px, 5vw, 60px);  /* Min 20px, responsive, max 50px */
+--video-container-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+--content-container-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+--top-image-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+--bottom-image-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+--footer-height:clamp(90px, 25vw, 700px);
+--font-size:clamp(10px, 1.2vw, 30px);
+--footer-title-font-size:clamp(30px, 3vw, 40px);
+--footer-content-font-size:clamp(5px, 2vw, 20px);
+--sirbar-height: clamp(22vw, 8vw, 19vw);
+
+
+
+
+
+
+/* Responsive font sizes */
+--font-size-desktop: clamp(14px, 1.5vw, 18px); /* Min 14px, responsive, max 18px */
+--font-size-mobile: clamp(12px, 1.2vw, 16px);  /* Min 12px, responsive, max 16px */
+
+/* Sidebar width responsive */
+--sidebar-width: clamp(200px, 30vw, 250px); /* Min 200px, responsive, max 250px */
+}
+
+
+@font-face {
+font-family: 'kcobraletra';
+src: url('../font/KCObraLetraRegular.woff2') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Beckman';
+src: url('../font/subset-BeckmanFREE.woff2') format('woff2');
+font-weight: bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Lexend';
+src: url('../font/subset-Lexend-Regular.woff2') format('woff2');
+font-weight: bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Playfair';
+src: url('../font/PlayfairDisplay-Regular.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Benedict';
+src: url('../font/Benedict\ Regular.woff') format('woff');
+font-weight: bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Garamond'; /* Name of the font */
+src: url('../font/EBGaramond08-Regular.woff') format('woff'); /* Path to the font file */
+font-weight: normal; /* Specify the font weight */
+font-style: normal; /* Specify the font style */
+font-display: swap; /* Optional: Fallback text display while font loads */
+}
+@font-face {
+font-family: 'Montserrat'; /* Name of the font */
+src: url('../font/monserrat/Montserrat-Regular.woff') format('woff2'); /* Path to the font file */
+font-weight: normal; /* Specify the font weight */
+font-style: normal; /* Specify the font style */
+font-display: swap; /* Optional: Fallback text display while font loads */
+}
+@font-face {
+font-family: 'Tex-gyre'; /* Name of the font */
+src: url('../font/monserrat/subset-TeXGyreTermes-Regular.woff2') format('woff2'); /* Path to the font file */
+font-weight: normal; /* Specify the font weight */
+font-style: normal; /* Specify the font style */
+}
+
+
+/* Set height for parent elements */
+html, body {
+margin: 0; /* Remove default margins */
+padding: 0; /* Remove default padding */
+box-sizing: border-box;
+font-family: garamond, sans-serif;
+}
+
+body {
+font-family: 'KC Obra Letra', sans-serif;
+display: flex;
+flex-direction: column; /* Align elements vertically */
+}
+
+
+
+
+
+/* Top Bar */
+.top-bar1 {
+background-color: #000;
+display: flex;
+align-items: center;
+position: relative;
+top: 0;
+height: var(--top-bar-height); /* Dynamically adjust height */
+width: 100%;
+z-index: 1000;
+transition: height 0.3s ease, opacity 0.5s ease, top 0.5s ease;
+}
+
+
+/* Top Bar Scroll Effect */
+.top-bar1.hidden {
+opacity: 0;
+top: -50px;
+transition: opacity 0.5s ease, top 0.5s ease;
+}
+
+/* Navbar Scroll Effect */
+nav.scrolled {
+position: fixed;
+top: 0;
+background-color: #ffffff;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+transition: top 0.5s ease, opacity 0.5s ease;
+z-index: 10000;
+}
+
+.navbar-brand {
+display: flex;
+position: absolute;
+max-height: var(--top-bar-height);
+height: 100%;
+width: auto;
+white-space: nowrap;
+
+}
+/* Bioprocess Text */
+/* Bioprocess Text */
+.top-bar1 h21 {
+font-family: "montserrat", sans-serif;
+font-style: normal;
+font-size: 2.3vw;
+color: white;
+align-self: center;
+position: absolute;
+margin-left: 23vw;
+margin-right: 20vh;
+box-sizing: border-box;
+}
+
+/* Hover Effect */
+.top-bar1:hover {
+opacity: 0.8; /* Slightly fade on hover */
+}
+
+/* When scrolled */
+.top-bar1.scrolled {
+opacity: 0.5;
+top: -50px; /* Moves the bar upwards */
+}
+
+/* Hidden state for .top-bar */
+.hidden {
+opacity: 0;
+top: -50px;
+transition: opacity 0.5s ease, top 0.5s ease;
+}
+/*End of Top Bar*/
+
+
+
+/* Navigation Bar */
+nav {
+position: relative; /* Fixed to ensure visibility when it reappears */
+height: var(--navbar-height);
+width: 100%;
+background-color: white;
+box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 99911;
+}
+
+/* Show Navigation Bar */
+nav.visible {
+opacity: 1; /* Make visible */
+pointer-events: auto; /* Enable interactions */
+top: var(--top-bar-height); /* Fixed position below the top bar */
+}
+
+/* Navigation List */
+nav ul {
+width: 100%; /* Full width */
+list-style: none; /* Remove bullet points */
+display: flex; /* Align items horizontally */
+justify-content: flex-end; /* Align items to the right */
+align-items: center; /* Center items vertically */
+margin: 0; /* Remove default margin */
+padding: 0; /* Remove default padding */
+}
+
+/* Navigation Items */
+nav li {
+height: 40px; /* Match the height of the navbar */
+display: flex; /* Flexbox for alignment */
+align-items: center; /* Center content vertically */
+}
+
+
+/* Navigation Links */
+nav a {
+height: 100%;
+padding: 0 30px;
+font-size: clamp(14px, 1.2vw, 18px); /* Responsive font size */
+text-decoration: wavy; /* Remove underline */
+display: flex; /* Flexbox for alignment */
+align-items: center; /* Center content vertically */
+color: #0b088f;
+transition: color 0.2s ease, background-color 0.2s ease; /* Smooth hover effect for color and background */
+display: flex;
+align-items: center;
+color: black;
+}
+/* Active Link Styling */
+nav a.active {
+color: #F3BD00; /* Change text color for active website button */
+font-weight:lighter; 
+text-decoration: none; /* Remove underline */
+background-color: rgba(255, 255, 255, 0); /* Subtle background for active link */
+transition: color 0.2s ease, background-color 0.2s ease; /* Smooth transition */
+}
+
+
+/* Hover Effect */
+nav a:hover {
+text-decoration: wavy;
+color: #F3BD00; /* Change text color */
+background-color: #0C2B4B; /* Optional: Add a background color on hover */
+
+}
+
+nav li:first-child {
+margin-right: 0; /* Push all other items to the right */
+}
+
+.sidebar{
+position: fixed;
+margin-top: var(--top-bar-height);
+top: 0;
+right: 0;
+height: 240px;
+width: 200px;
+background-color: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(10px);
+box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+list-style: none;
+display: none;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+}
+.sidebar li{
+width: 100%;
+}
+.sidebar a{
+width: 100%;
+}
+
+.menu-button{
+display: none;
+}
+@media(max-width: 800px){
+.hideOnMobile{
+display: none;
+}
+.menu-button{
+display: block;
+}
+}
+@media(max-width: 400px){
+.sidebar{
+width: 100%;
+}
+}
+
+
+
+.maven-pro-100 h2 {
+  font-family: "Maven Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2{
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    margin-top: 1vw;
+    font-size: 2.8vw ;
+    font-family:'playfair display';
+    font-optical-sizing: auto;
+    font-style: bold;
+    font-weight: 400;
+    z-index: 5;
+}
+.switch-bar {
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+    background: #f8f9fa;
+    padding: 10px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.switch {
+    font-size: 2.2vw;
+    font-family: 'kcobraletra';
+    color: #333333;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.switch.active {
+    color: #ffd000;
+}
+
+.switch::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, white, limegreen, white);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.switch:hover::after,
+.switch.active::after {
+    width: var(--underline-width);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General container styles */
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+/* Slider for horizontal scrolling */
+.slider {
+    display: flex;
+    align-items: flex-start;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Section styles */
+.section {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #0b0358;
+    height: 100vw;
+}
+
+/* Section content */
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding-top: 7vw;
+    margin:0;
+    align-items: center;
+    position: relative;
+    padding-right: 10vw;
+    
+    padding-left: 10vw;
+    gap: 50px;
+
+}
+
+/* Student card styles */
+.student-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Prevents overflow during animation */
+    width: 200px;
+    height: 281px;
+
+}
+
+
+
+/* Border animation */
+.student-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 0; /* Start with no height */
+    border: 0 solid transparent; /* Invisible border */
+    box-sizing: border-box; /* Ensures proper border rendering */
+    transition: height 0.2s ease, border-width 0.2s ease, border-color 1s ease; /* Animate height, width, and color */
+    z-index: 1;
+    padding-left: 5%;
+}
+
+.student-card:hover::before {
+    height: 97%; /* Full height */
+    border-width: 0.5vw; /* Border thickness adjusts based on viewport */
+    border-color: #ffd700; /* Golden border becomes visible */
+    padding-left: 5%;
+}
+
+/* Responsive adjustments for the border */
+@media (max-width: 768px) {
+    .student-card:hover::before {
+        border-width: 1vw; /* Thicker border for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .student-card:hover::before {
+        border-width: 1.5vw; /* Even thicker border for very small screens */
+    }
+}
+
+/* Profile image styling */
+.profile-image {
+    width: 188px;
+    height: 217px;
+    z-index: 1;
+    padding-top: 5px;
+    position: relative;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Darken image on hover */
+.student-card:hover .profile-image {
+    filter: brightness(25%); /* 50% darker */
+}
+
+
+/* Hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Position it slightly below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+/* Visible state (fade-in) */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Bring to original position */
+}
+
+/* Hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Position it slightly below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+/* Visible state (fade-in) */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Bring to original position */
+}
+
+
+
+
+/* Name box styling */
+.name-box {
+    background-color: #d9d9d9;
+    padding: 8px 10px;
+    width: 170px; /* Slightly wider than the image */
+    height: 30px; /* Extra height for alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+/* Student name text */
+.student-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    z-index: 2;
+}
+
+
+/* Social icons */
+.social-icons {
+    position: absolute;
+    top: -30%; /* Start off-screen above the profile */
+    left: 50%;
+    transform: translate(-50%, -30%); /* Translate for initial position */
+    opacity: 0.2; /* Start with low transparency */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.5s ease, opacity 0.5s ease; /* Smooth fade-in and movement animation */
+    z-index: 3;
+}
+
+/* Show icons on hover */
+.student-card:hover .social-icons {
+    top: 50%; /* Move to the middle of the profile */
+    transform: translate(-50%, -50%); /* Center the icons */
+    opacity: 1; /* Full visibility when settled in the middle */
+}
+
+/* Icon styling */
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on individual icons */
+.social-icons a img:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+
+
+
+
+
+
+
+.top-left-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+}
+.main-bar-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5vw;
+    width: 100%;
+    z-index: 3;
+}
+
+.main-bar-image1{
+    position: absolute;
+    top: 48.9vw;
+    left: 0;
+    height: 5vw;
+    width: 50%;
+    z-index: 3;
+}
+
+
+h3{
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    margin-top: 49.7vw;
+    font-size: 2.8vw ;
+    font-family:'playfair display';
+    font-optical-sizing: auto;
+    font-style: bold;
+    font-weight: 400;
+    z-index: 5;
+}
+
+
+
+
+/* Section styles */
+.section1 {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #0b0358;
+    height: auto;
+}
+
+/* Section content */
+.master-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding-top: 7vw;
+    margin:0;
+    align-items: center;
+    position: absolute;
+    top: 49vw;
+    gap: 50px;
+
+
+}

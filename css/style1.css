@@ -1,0 +1,824 @@
+:root {
+    --primary: #F3BD00;
+    --secondary: #757575;
+    --light: #F3F6F8;
+    --dark: #0C2B4B;
+}
+
+/* General Layout */
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.my-6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 5%;
+    bottom: 5%;
+    z-index: 99;
+}
+
+/* Spinner */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Custom Button */
+.custom-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #333333; /* Darker black shade on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button:hover i {
+    transform: translateX(5px); /* Arrow moves right */
+}
+
+.custom-button:active {
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Adjust the video container to account for the navbar height */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    height: 50vh; /* 50% of viewport height */
+    margin-top: 70px; /* Adjust based on the height of your navbar */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ensure full width for the video caption */
+.video-caption {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%);
+    width: 90%; /* Allow some padding on smaller screens */
+    text-align: center;
+    z-index: 2; /* Make sure it's above the video */
+}
+
+/* Text styling for the heading */
+.video-caption h1 {
+    white-space: normal; /* Allow text to wrap */
+    font-size: 3rem; /* Adjust base font size */
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.9); /* Bright white color */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Dark overlay over the video */
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .video-caption h1 {
+        font-size: 2.5rem; /* Reduce font size for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .video-caption h1 {
+        font-size: 1.8rem; /* Further reduce font size for smaller screens */
+        line-height: 1.5; /* Adjust line height for readability */
+        padding: 0 1rem; /* Add horizontal padding */
+    }
+}
+
+
+
+/* Button */
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square, .btn-sm-square, .btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Navbar */
+/* Fix overlap of navbar and topbar */
+.custom-navbar {
+    margin-top: 40px; /* Adjust based on the height of the topbar */
+    z-index: 1030; /* Ensure it remains above other elements */
+}
+
+/* Ensure the topbar remains visible */
+.bg-dark.text-light {
+    z-index: 1020; /* Below the navbar but above other elements */
+    position: relative;
+}
+
+/* Ensure topbar is below navbar */
+.bg-dark.text-light {
+    z-index: 1020; /* Topbar */
+    position: relative;
+}
+
+/* Ensure navbar is above topbar */
+.custom-navbar {
+    z-index: 1030; /* Navbar */
+}
+
+.custom-navbar {
+    top: 0;
+    transition: top 0.5s ease;
+    background-color: #ffffff; /* White background for the navbar */
+}
+
+.custom-navbar {
+    top: 0;
+    transition: top 0.5s ease;
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    padding: 15px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link.active {
+    color: #007bff;
+}
+
+.custom-toggler-img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-color: #007bff;
+}
+
+/* Mobile Menu (Hidden by default on large screens) */
+@media (max-width: 991px) {
+    .custom-navbar .navbar-nav .nav-link {
+        padding: 10px 15px;
+    }
+
+    .custom-navbar .navbar-nav {
+        border-top: 1px solid #f1f1f1;
+    }
+
+    .custom-navbar .navbar-collapse {
+        background-color: #f8f9fa;
+    }
+}
+
+/* Show the full navbar on large screens */
+@media (min-width: 992px) {
+    .custom-navbar .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .custom-navbar .navbar-nav .nav-link {
+        margin-right: 20px;
+    }
+
+    .custom-navbar .btn-primary {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 30px;
+        padding: 12px 25px;
+    }
+
+    .navbar-collapse.collapse {
+        display: flex !important;
+    }
+}
+
+/* Dropdown Menu (Optional for additional pages) */
+.custom-navbar .dropdown-menu {
+    display: none;
+    background: #f8f9fa;
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.custom-navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Carousel */
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+
+
+/* Header */
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, .75);
+    z-index: 1;
+}
+
+/* Footer */
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: var(--light);
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--light);
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.copyright {
+    background: #092139;
+}
+
+.copyright a {
+    color: var(--primary);
+}
+
+.copyright a:hover {
+    color: var(--light);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .custom-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .video-container {
+        height: 40vh; /* Less height for smaller screens */
+    }
+
+    .navbar .navbar-nav .nav-link {
+        margin-right: 15px;
+    }
+
+    .carousel-caption h1.single-line {
+        font-size: 1.5rem;
+    }
+
+    .back-to-top {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjustments for mobile screens */
+    .custom-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .video-container {
+        height: 35vh; /* Even less height for small screens */
+    }
+
+    .navbar .navbar-nav .nav-link {
+        font-size: 14px;
+        padding: 20px 0;
+    }
+
+    .carousel-caption h1.single-line {
+        font-size: 1.2rem;
+    }
+}
+
+i culdnt get where i have t modify in this css
+guide me :root {
+    --primary: #F3BD00;
+    --secondary: #757575;
+    --light: #F3F6F8;
+    --dark: #0C2B4B;
+}
+
+/* General Layout */
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.my-6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 5%;
+    bottom: 5%;
+    z-index: 99;
+}
+
+/* Spinner */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Custom Button */
+.custom-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #333333; /* Darker black shade on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button:hover i {
+    transform: translateX(5px); /* Arrow moves right */
+}
+
+.custom-button:active {
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Adjust the video container to account for the navbar height */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    height: 50vh; /* 50% of viewport height */
+    margin-top: 70px; /* Adjust based on the height of your navbar */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ensure full width for the video caption */
+.video-caption {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%);
+    width: 90%; /* Allow some padding on smaller screens */
+    text-align: center;
+    z-index: 2; /* Make sure it's above the video */
+}
+
+/* Text styling for the heading */
+.video-caption h1 {
+    white-space: normal; /* Allow text to wrap */
+    font-size: 3rem; /* Adjust base font size */
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.9); /* Bright white color */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Dark overlay over the video */
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .video-caption h1 {
+        font-size: 2.5rem; /* Reduce font size for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .video-caption h1 {
+        font-size: 1.8rem; /* Further reduce font size for smaller screens */
+        line-height: 1.5; /* Adjust line height for readability */
+        padding: 0 1rem; /* Add horizontal padding */
+    }
+}
+
+
+
+/* Button */
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square, .btn-sm-square, .btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Navbar */
+/* Fix overlap of navbar and topbar */
+.custom-navbar {
+    margin-top: 40px; /* Adjust based on the height of the topbar */
+    z-index: 1030; /* Ensure it remains above other elements */
+}
+
+/* Ensure the topbar remains visible */
+.bg-dark.text-light {
+    z-index: 1020; /* Below the navbar but above other elements */
+    position: relative;
+}
+
+/* Ensure topbar is below navbar */
+.bg-dark.text-light {
+    z-index: 1020; /* Topbar */
+    position: relative;
+}
+
+/* Ensure navbar is above topbar */
+.custom-navbar {
+    z-index: 1030; /* Navbar */
+}
+
+.custom-navbar {
+    top: 0;
+    transition: top 0.5s ease;
+    background-color: #ffffff; /* White background for the navbar */
+}
+
+.custom-navbar {
+    top: 0;
+    transition: top 0.5s ease;
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    padding: 15px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link.active {
+    color: #007bff;
+}
+
+.custom-toggler-img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-color: #007bff;
+}
+
+/* Mobile Menu (Hidden by default on large screens) */
+@media (max-width: 991px) {
+    .custom-navbar .navbar-nav .nav-link {
+        padding: 10px 15px;
+    }
+
+    .custom-navbar .navbar-nav {
+        border-top: 1px solid #f1f1f1;
+    }
+
+    .custom-navbar .navbar-collapse {
+        background-color: #f8f9fa;
+    }
+}
+
+/* Show the full navbar on large screens */
+@media (min-width: 992px) {
+    .custom-navbar .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .custom-navbar .navbar-nav .nav-link {
+        margin-right: 20px;
+    }
+
+    .custom-navbar .btn-primary {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 30px;
+        padding: 12px 25px;
+    }
+
+    .navbar-collapse.collapse {
+        display: flex !important;
+    }
+}
+
+/* Dropdown Menu (Optional for additional pages) */
+.custom-navbar .dropdown-menu {
+    display: none;
+    background: #f8f9fa;
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.custom-navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Carousel */
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+
+
+/* Header */
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, .75);
+    z-index: 1;
+}
+
+/* Footer */
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: var(--light);
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--light);
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.copyright {
+    background: #092139;
+}
+
+.copyright a {
+    color: var(--primary);
+}
+
+.copyright a:hover {
+    color: var(--light);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .custom-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .video-container {
+        height: 40vh; /* Less height for smaller screens */
+    }
+
+    .navbar .navbar-nav .nav-link {
+        margin-right: 15px;
+    }
+
+    .carousel-caption h1.single-line {
+        font-size: 1.5rem;
+    }
+
+    .back-to-top {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjustments for mobile screens */
+    .custom-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .video-container {
+        height: 35vh; /* Even less height for small screens */
+    }
+
+    .navbar .navbar-nav .nav-link {
+        font-size: 14px;
+        padding: 20px 0;
+    }
+
+    .carousel-caption h1.single-line {
+        font-size: 1.2rem;
+    }
+}

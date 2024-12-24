@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Team</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Cabin:
+    ital,wght@0,400..700;1,400..700&family=Comfortaa:wght@300..700&family=EB+Garamond:ital,
+    wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Faculty+Glyphic&
+    family=Hurricane&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;
+    0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&
+    family=Lexend:wght@100..900&family=M+PLUS+Rounded+1c&family=Maven+Pro:wght@400..900&
+    family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..
+    1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,
+    wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&
+    family=Overpass:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&
+    family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&
+    family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&
+    family=Signika:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&
+    family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Lab ICON in TAB -->
+    <link href="img/lab_logo.ico" rel="icon">
+        <!-- Customized Style Sheet -->
+        <link href="css/Team.css" rel="stylesheet">
+   
+</head>
+<body>
+    <!-- start preloader -->
+		<div class="preloader">
+			<div class="sk-spinner sk-spinner-wave">
+     	 		<div class="sk-rect1"></div>
+       			<div class="sk-rect2"></div>
+       			<div class="sk-rect3"></div>
+      	 		<div class="sk-rect4"></div>
+      			<div class="sk-rect5"></div>
+     		</div>
+    	</div>
+        <script>
+            document.addEventListener("scroll", () => {
+                const topBar = document.querySelector(".top-bar");
+                if (window.scrollY > 400) {
+                    topBar.style.opacity = "1000"; /* Fade out */
+                    topBar.style.top = "-50px"; /* Slide up */
+                } else {
+                    topBar.style.opacity = "100"; /* Fade in */
+                    topBar.style.top = "0"; /* Slide down */
+                }
+            });
+        </script>
+    <!-- end preloader -->
+
+    <!-- Topbar Start -->
+    <div class="top-bar1" id="top-bar">
+        <a href="index.html" class="navbar-brand">
+            <img src="img/Lab_logo.png" alt="Lab Icon">
+            <h21>BIO PROCESS ANALYTICAL TECHNOLOGY LABORATORY</h21>
+        </a>
+    </div>
+    <!-- Topbar End --> 
+
+
+
+
+
+<!-- Navbar Start -->
+<nav id="navbar">
+    <!-- Sidebar for Mobile View -->
+    <ul class="sidebar">
+        <li onclick="hideSidebar(event)">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                    <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+                </svg>
+            </a>
+        </li>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="profile.html" >Profile</a></li>
+        <li><a href="Research.html">Research</a></li>
+        <li><a href="Our_Team.html" class="active">Our Team</a></li>
+        <li><a href="Publications.html" >Publications</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  
+    <!-- Main Navbar -->
+    <ul>
+        <li class="hideOnMobile"><a href="index.html" >Home</a></li>
+        <li class="hideOnMobile"><a href="profile.html" >Profile</a></li>
+        <li class="hideOnMobile"><a href="Research.html">Research</a></li>
+        <li class="hideOnMobile"><a href="Our_Team.html" class="active">Our Team</a></li>
+        <li class="hideOnMobile"><a href="Publications.html" >Publications</a></li>
+        <li class="hideOnMobile"><a href="Contact.html">Contact</a></li>
+        <li class="menu-button" onclick="showSidebar(event)">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                    <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+  </nav>
+  <!-- Navbar End -->
+
+  <div class="switch-bar">
+    <span id="currentBtn" class="switch active" style="--underline-width: 25vw;">Current Members</span>
+    <span id="alumniBtn" class="switch" style="--underline-width: 20vw;">Alumni</span>
+</div>
+
+<div class="container">
+    <div class="slider" id="slider">
+        <div class="section" id="currentMembers">
+            <img src="img/stud_top_left.png" alt="top-left-image" class="top-left-image">
+            <img src="img/stud_main_bar.png" alt="main-bar-image" class="main-bar-image">
+            <h2>Ph.D Students</h2>
+            <div class="section-content">
+                <div class="student-card">
+                    <img src="img/sidharth.jpg" alt="Sidharth Guhan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sidharth Guhan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/payal_main.png" alt="Student Name 2" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Payal Mukherjee</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+
+
+                <div class="student-card">
+                    <img src="img/website_profile photo_sandhya-crop-u22542.jpg" alt="Student Name 2" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sandhya</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+
+                <div class="student-card">
+                    <img src="img/naveen_main.png" alt="Student Name 2" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Naveen Raj</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/ankita.jpg" alt="Student Name 2" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Ankita Saikia</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/Paulmi_main.png" alt="Student Name 2" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Poulami Mukherjee</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="https://via.placeholder.com/150" alt="Student Name 2" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Ajay Gunasekaran</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/sushanth_main.png" alt="Student Name 2" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sushanth Raghavendra P S</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <!-- Repeat structure for other students -->
+            </div>
+            <img src="img/stud_main_bar.png" alt="main-bar-image" class="main-bar-image">
+            <h2>Ph.D Students</h2>
+            <img src="img/stud_main_bar.png" alt="main-bar-image" class="main-bar-image1">
+            <h3>Master Students</h3>
+<div class="master-content">
+                <div class="student-card">
+                    <img src="img/sidharth.jpg" alt="Sidharth Guhan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sidharth Guhan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/sidharth.jpg" alt="Sidharth Guhan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sidharth Guhan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/sidharth.jpg" alt="Sidharth Guhan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sidharth Guhan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/sidharth.jpg" alt="Sidharth Guhan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sidharth Guhan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/sidharth.jpg" alt="Sidharth Guhan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sidharth Guhan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/sidharth.jpg" alt="Sidharth Guhan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sidharth Guhan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/sidharth.jpg" alt="Sidharth Guhan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Sidharth Guhan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        <div class="section" id="alumni">
+            <img src="img/stud_main_bar.png" alt="main-bar-image" class="main-bar-image">
+            <h2>Ph.D Students</h2>
+            <div class="section-content">
+                <div class="student-card">
+                    <img src="img/katla.jpg" alt="Katla Srikanth" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Katla Srikanth</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/naresh.jpg" alt="Naresh Mohan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Naresh Mohan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/kiran.jpg" alt="Kiran Kumar Gali" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Kiran Kumar Gali</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/isha.jpg" alt="Isha Vishan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Isha Vishan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/rengesh_passport photograph.jpg" alt="Rengesh Balakrishnan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Rengesh Balakrishnan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/ganesh.jpg" alt="Ganesh Nehru" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Ganesh Nehru</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/subbi.jpg" alt="Subbi Rami R Tadi" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Subbi Rami R Tadi</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/Nivedita_main1.png" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Nivedita Swaminathan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/anjali.jpg" alt="Student Name 2" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Anjali Patel</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/satya.jpg" alt="Satya Sai Pavan" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Satya Sai Pavan</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="img/elasuganya_main.jpg" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Dr. E. Suganya</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="https://via.placeholder.com/150" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Alumni Name 1</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="https://via.placeholder.com/150" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Alumni Name 1</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="https://via.placeholder.com/150" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Alumni Name 1</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="https://via.placeholder.com/150" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Alumni Name 1</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="https://via.placeholder.com/150" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Alumni Name 1</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="https://via.placeholder.com/150" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Alumni Name 1</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="https://via.placeholder.com/150" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Alumni Name 1</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <img src="https://via.placeholder.com/150" alt="Alumni Name 1" class="profile-image">
+                    <div class="name-box">
+                        <p class="student-name">Alumni Name 1</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/linkedin11.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="img/orcid1.png" alt="ORCID"></a>
+                        <a href="#" target="_blank"><img src="img/Googlescholar1.png" alt="Google Scholar"></a>
+                    </div>
+                </div>
+
+                <!-- Repeat structure for other alumni -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentBtn = document.getElementById('currentBtn');
+            const alumniBtn = document.getElementById('alumniBtn');
+            const slider = document.getElementById('slider');
+
+            currentBtn.addEventListener('click', () => {
+                slider.style.transform = 'translateX(0)';
+                currentBtn.classList.add('active');
+                alumniBtn.classList.remove('active');
+            });
+
+            alumniBtn.addEventListener('click', () => {
+                slider.style.transform = 'translateX(-50%)';
+                alumniBtn.classList.add('active');
+                currentBtn.classList.remove('active');
+            });
+        });
+
+</script>
+
+
+
+
+
+<script>
+    // Show Sidebar
+    function showSidebar(event) {
+        event.preventDefault(); // Prevent default action
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+    }
+  
+    // Hide Sidebar
+    function hideSidebar(event) {
+        event.preventDefault(); // Prevent default action
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+    }
+  
+    // Scroll functionality for Top Bar and Navbar
+    let lastScrollTop = 0;
+  
+    window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('navbar');
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+  
+        if (scrollY > 40) {
+            navbar.classList.add('scrolled'); // Add fixed navbar style
+        } else {
+            navbar.classList.remove('scrolled'); // Remove fixed navbar style
+        }
+  
+        lastScrollTop = scrollY; // Update scroll position
+    });
+  </script>
+  
+  <!--
+      
+        <script>
+          function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+          }
+          function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+          }
+        </script>
+      <!-- Navbar End -->
+  
+  
+  
+      <script>
+        let lastScrollTop = 0; // Store the previous scroll position
+      
+        window.addEventListener('scroll', function () {
+            const topBar = document.querySelector('.top-bar1');
+            const navbar = document.querySelector('nav');
+            let scrollY = window.scrollY || document.documentElement.scrollTop;
+      
+            // Hide Top Bar when scrolling down
+            if (scrollY > 50) {
+                topBar.classList.add('hidden');
+                navbar.classList.add('scrolled');
+            } else {
+                topBar.classList.remove('hidden');
+                navbar.classList.remove('scrolled');
+            }
+      
+            // Navbar reappears when scrolling up
+            if (scrollY < lastScrollTop) {
+                navbar.style.top = '0'; // Show navbar
+            } else {
+                navbar.style.top = '-100px'; // Slide up navbar
+            }
+      
+            lastScrollTop = scrollY; // Update the scroll position
+        });
+      </script>
+
+</body>
+</html>
+<!-- Wastages/Our Team.html 
+
+<div class="section-content">
+    <div class="student-card">
+        <img src="https://via.placeholder.com/100" alt="Student 1">
+        <p>Student Name 1</p>
+    </div>
+    <div class="student-card">
+        <img src="https://via.placeholder.com/100" alt="Student 2">
+        <p>Student Name 2</p>
+    </div>
+</div>
+</div>
+<div class="section" id="alumni">
+<div class="section-content">
+    <div class="student-card">
+        <img src="https://via.placeholder.com/100" alt="Alumni 1">
+        <p>Alumni Name 1</p>
+    </div>
+    <div class="student-card">
+        <img src="https://via.placeholder.com/100" alt="Alumni 2">
+        <p>Alumni Name 2</p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="header">
+    <h2>Our Team</h2>
+    -->

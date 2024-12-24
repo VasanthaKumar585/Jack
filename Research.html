@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Team</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Cabin:
+    ital,wght@0,400..700;1,400..700&family=Comfortaa:wght@300..700&family=EB+Garamond:ital,
+    wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Faculty+Glyphic&
+    family=Hurricane&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;
+    0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&
+    family=Lexend:wght@100..900&family=M+PLUS+Rounded+1c&family=Maven+Pro:wght@400..900&
+    family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..
+    1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,
+    wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&
+    family=Overpass:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&
+    family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&
+    family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&
+    family=Signika:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&
+    family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Lab ICON in TAB -->
+    <link href="img/lab_logo.ico" rel="icon">
+        <!-- Customized Style Sheet -->
+        <link href="css/Research.css" rel="stylesheet">
+   
+</head>
+<body>
+    <!-- start preloader -->
+		<div class="preloader">
+			<div class="sk-spinner sk-spinner-wave">
+     	 		<div class="sk-rect1"></div>
+       			<div class="sk-rect2"></div>
+       			<div class="sk-rect3"></div>
+      	 		<div class="sk-rect4"></div>
+      			<div class="sk-rect5"></div>
+     		</div>
+    	</div>
+        <script>
+            document.addEventListener("scroll", () => {
+                const topBar = document.querySelector(".top-bar");
+                if (window.scrollY > 400) {
+                    topBar.style.opacity = "1000"; /* Fade out */
+                    topBar.style.top = "-50px"; /* Slide up */
+                } else {
+                    topBar.style.opacity = "100"; /* Fade in */
+                    topBar.style.top = "0"; /* Slide down */
+                }
+            });
+        </script>
+    <!-- end preloader -->
+
+    <!-- Topbar Start -->
+    <div class="top-bar1" id="top-bar">
+        <a href="index.html" class="navbar-brand">
+            <img src="img/Lab_logo.png" alt="Lab Icon">
+            <h21>BIO PROCESS ANALYTICAL TECHNOLOGY LABORATORY</h21>
+        </a>
+    </div>
+    <!-- Topbar End --> 
+
+
+
+
+
+<!-- Navbar Start -->
+<nav id="navbar">
+    <!-- Sidebar for Mobile View -->
+    <ul class="sidebar">
+        <li onclick="hideSidebar(event)">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                    <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+                </svg>
+            </a>
+        </li>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="profile.html" >Profile</a></li>
+        <li><a href="Research.html" class="active">Research</a></li>
+        <li><a href="Our_Team.html" >Our Team</a></li>
+        <li><a href="Publications.html">Publications</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  
+    <!-- Main Navbar -->
+    <ul>
+        <li class="hideOnMobile"><a href="index.html" >Home</a></li>
+        <li class="hideOnMobile"><a href="profile.html" >Profile</a></li>
+        <li class="hideOnMobile"><a href="Research.html" class="active">Research</a></li>
+        <li class="hideOnMobile"><a href="Our_Team.html" >Our Team</a></li>
+        <li class="hideOnMobile"><a href="Publications.html">Publications</a></li>
+        <li class="hideOnMobile"><a href="Contact.html">Contact</a></li>
+        <li class="menu-button" onclick="showSidebar(event)">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                    <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+  </nav>
+  <!-- Navbar End -->
+
+   <!-- The sidebar -->
+   
+<!-- Image Section -->
+<div class="image-container">
+  <img src="img/research_page.jpg" alt="Bioprocess Image" class="bioprocess">
+  <div class="image-text">
+    <h1>Research Area</h1>
+    <p>
+      In our BioPAT lab facility, we do bioprocess development taking account of all critical process key parameters into process design.
+      Measurement, monitoring, and control (M3C) of key parameters is achieved by integration of real-time process analytics 
+      (e.g., calorimetry, dielectric spectroscopy, exhaust gas analysis, software sensors) with a bioprocess system. Our range of products 
+      of interest include therapeutic proteins (cancer therapy), biopolymers, and platform chemicals. 
+      <span style="text-indent: 4em; display: inline-block;">BioPAT is an emerging research area and deserves potential industrial application involving upscaling of a bioprocess system 
+      in accordance with FDA norms. Indian biotech sector is now embracing the FDA's PAT initiative in bioprocess systems 
+      to ensure consistent quality in final products.</span>
+    </p>
+  </div>
+</div>
+
+  
+  
+  
+  
+
+
+
+ <!-- Sidebar -->
+ <div id="vertical-sidebar" style="top: 740.6px;">
+  <ul>
+      <li><a href="#BIOTHERAPEUTICS">BIOTHERAPEUTICS</a></li>
+      <li><a href="#BIOPOLYMERS">BIOPOLYMERS</a></li>
+      <li><a href="#NUTRACEUTICALS">NUTRACEUTICALS</a></li>
+      <li><a href="#REAL-TIME MONTIORING AND CONTROL">REAL-TIME MONTIORING AND CONTROL</a></li>
+      <li><a href="#FUNDING AGENCY">FUNDING AGENCY</a></li>
+      <li><a href="#COLLABORATORS">COLLABORATORS</a></li>
+  </ul>
+</div>
+
+
+
+
+<!-- Content Sections -->
+<section id="BIOTHERAPEUTICS" class="content-section">
+    <h2>BIOTHERAPEUTICS</h2>
+    <h3>Human Interferon α2b</h3>
+    <p>
+        Human interferon alpha 2b (huIFNα2b) is an intronless sequence that encodes a polypeptide of 165 amino acids. 
+        It can trigger multiple responses that could be antiviral, antibacterial, antiproliferative, or even immunomodulatory. 
+        Therefore, huIFNα2b either on its own or in combination with other interferons is being extensively used in prophylaxis 
+        of type B and C hepatitis, several cancers such as melanoma, AIDS-related Kaposi sarcoma, chronic myeloid lymphoma, 
+        and angioblastoma. Our group successfully engineered a recombinant glycosylated huIFNα2b-producing strain. High cell 
+        density cultivation of glycoengineered Pichia pastoris embraced by the PAT framework produced a significant improvement 
+        in huIFNα2b titer (1.4 g/L) by application of a robust control strategy. 
+        Currently, our research is directed towards developing control strategies to maintain tight control over specific growth 
+        rates to ensure consistent product quality.
+    </p>
+
+    <!-- Images and Captions Section -->
+    <div class="image-gallery">
+        <!-- First Image -->
+        <div class="gallery-item">
+            <img src="img/HI1.png" alt="Image Description 1" class="modal-trigger">
+            <p>Cloning, expression, purification, and characterization of recombinant human interferon alpha 2b in Pichia pastoris</p>
+        </div>
+        <!-- Second Image -->
+        <div class="gallery-item">
+            <img src="img/HI2.png" alt="Image Description 2" class="modal-trigger">
+            <p>SDS-PAGE of fractions collected during Concanavalin A purification of glycosylated huIFNα2b</p>
+        </div>
+        <!-- Third Image -->
+        <div class="gallery-item">
+            <img src="img/HI3.jpg" alt="Image Description 3" class="modal-trigger">
+            <p>Influence of different specific growth rates (μsp) on huIFNα2b titer and protein yield coefficient</p>
+        </div>
+    </div>
+
+    <!-- Modal for Full-Screen View -->
+    <div id="image-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Heparosan Content -->
+    <h3>Heparosan</h3>
+    <p>
+        Heparosan is an anionic, un-sulfated precursor of heparin. It is composed of repeating disaccharide units of D-glucuronic acid 
+        and N-acetylglucosamine. Traditionally, heparin was derived from animals but caused serious adverse reactions leading to 
+        hypotension and the death of the patients. Chemoenzymatic synthesis of heparin emerged as an attractive alternative that 
+        requires heparosan as a starting molecule. Although significant yield was achieved in <i>E. coli</i> K5, it suffered severe 
+        disadvantages of causation of urinary infection in humans, secretion of exo and endotoxins which hindered its use. 
+        The global heparosan market is expected to increase because of its tremendous demand in the biopharmaceutical industry. 
+        Using metabolic engineering approaches, we successfully expressed heparosan in <i>Bacillus megaterium</i>. 
+        <a href="#">Currently, novel bioprocess strategies are aimed in order to enhance its production.</a>
+    </p>
+
+    <!-- Heparosan Structure Image -->
+    <div class="image-gallery">
+        <div class="gallery-item">
+            <img src="img/H1.jpg" alt="Heparosan Molecular Structure">
+            <p>Molecular structure of heparosan composed of repeating disaccharide units of GlcA and GlcNAc linked by β (1→4) and α (1→4) glycosidic bonds</p>
+        </div>
+    </div>
+
+    <p>
+        Lactic acid bacteria (LAB) is a viable option for heparosan production. It has grabbed much attention because of their reputation 
+        for being “GRAS”. GRAS organisms are commonly preferred to produce food grade, pharmaceutical grade products owing to 
+        its safety and availability of wide range of genetic manipulation tools. 
+        <a href="#">Presently, we are targeting LAB for heparosan production using metabolic engineering approach.</a>
+    </p>
+
+<!-- Additional Images and Graphs -->
+<div class="image-gallery">
+    <!-- First Graph -->
+    <div class="gallery-item">
+        <img src="img/H2.jpg" alt="Heparosan Production Graph">
+        <p><strong>Figure 1:</strong> Heparosan production by recombinant <i>B. megaterium</i> in a lab scale bioreactor. The graph illustrates the time-dependent changes in sucrose concentration, OD600, and heparosan production.</p>
+    </div>
+    <!-- PCR Confirmation -->
+    <div class="gallery-item">
+        <img src="img/H3.jpg" alt="PCR Confirmation">
+        <p><strong>Figure 2:</strong> PCR confirmation of <i>E. coli</i> kfiC and kfiA genes in <i>B. megaterium</i>. The gel bands validate the successful gene incorporation.</p>
+    </div>
+</div>
+
+</section>
+
+  
+
+  
+  
+<section id="BIOPOLYMERS" class="content-section">
+    <h2>BIOPOLYMERS</h2>
+    <p>
+      Hyaluronic acid (HA) is a linear, non-sulphated, anionic muco-heteropolysaccharide made of repetitive monomer units of UDP 
+      N-Acetyl glucosamine (UDP-GlcNAc) and UDP D-Glucuronic acid (UDP-GlcUA) alternately. The colossal significance of HA 
+      finds its application in the areas of medicine and cosmetics, such as drug delivery, osteoarthritis and ophthalmology surgery, 
+      wound healing, tissue engineering, moisturizer, dermal filler, etc. The molecular weight of HA is a critical quality attribute 
+      that determines its usage in various end applications and demands attention to achieve the consistent quality of the final product.
+    </p>
+  
+    <!-- Hyaluronic Acid Structure -->
+    <div class="image-gallery">
+      <div class="gallery-item">
+        <img src="img/b1.jpg" alt="Hyaluronic Acid Molecular Structure">
+        <p><strong>Figure 1:</strong> Molecular structure of hyaluronic acid.</p>
+      </div>
+    </div>
+  
+    <p>
+      The complexity in the HA production process has more to be dealt with the process engineering maneuvers than the genetic 
+      engineering approaches. Our lab designed different process strategies and successfully utilized PAT tools on monitoring and 
+      control of various critical process parameters (CPPs) influencing HA titer and molecular weight. Application of recombinant 
+      GRAS organisms as host is in progress to achieve high molecular HA production.
+    </p>
+  
+    <!-- Additional Images and Captions -->
+    <div class="image-gallery">
+      <!-- First Image -->
+      <div class="gallery-item">
+        <img src="img/b2.jpg" alt="Effect of DO and GlcNAc">
+        <p>
+          <strong>Figure 2:</strong> Effect of dissolved oxygen and GlcNAc on HA molecular weight and polydispersity index.
+        </p>
+      </div>
+      <!-- Second Image -->
+      <div class="gallery-item">
+        <img src="img/b3.jpg" alt="Dynamic Profiles of HA">
+        <p>
+          <strong>Figure 3:</strong> Dynamic profiles of DCW (g/L), pH, total protein concentration (g/L), and hyaluronic acid 
+          (mg/L) during batch cultivation of <i>S. thermophilus</i> under global optimal conditions.
+        </p>
+      </div>
+    </div>
+  
+    <p>
+      HA is commercially produced by extraction from rooster comb and by fermentation of natural and potentially pathogenic 
+      microbial producer <i>Streptococcus zooepidemicus</i> which is known to cause infections in the respiratory tract. Presently, our 
+      group is actively involved in metabolic engineering of GRAS organism as a host to achieve high molecular weight and more 
+      disperse HA synthesis.
+    </p>
+
+
+    <h3>D (–) Lactic Acid</h3>
+  <p>
+    D (–) lactic acid (DLA) is a versatile organic acid molecule, extensively employed in the production of thermostable 
+    biodegradable polymer, polylactic acid (PLA). Optically pure DLA is a prerequisite for the production of PLA with improved 
+    mechanical and thermal properties, expanding its scope in food packaging applications. Microbial fermentation processes 
+    offer an attractive techno-economic strategy to produce optically pure DLA compared to racemic mixtures yielding expensive 
+    chemical synthesis. However, the choice of raw feedstock and its preprocessing requirements for microbial fermentation 
+    decides the fate of the final product cost. 
+  </p>
+
+  <p>
+    Our team is actively pursuing designed biomass approach (DBA) to elucidate the right choice of raw feedstocks, preprocessing 
+    strategies, and elite strain targeting to enhance DLA titer and its productivity. The global demand for lactic acid (LA) derivatives 
+    requires feedstocks that are economically viable and environmentally sustainable. Exploration of low-cost feedstocks and the right 
+    choice of process engineering strategies could markedly reduce the DLA production cost. We examined Kodo millet bran residue 
+    (KMBR) and agroforestry/industry biomass as an alternative substrate.
+  </p>
+
+  <!-- DLA Images and Captions -->
+  <div class="image-gallery">
+    <!-- First Image -->
+    <div class="gallery-item">
+      <img src="img/l1.jpg" alt="D Lactic Acid Production Process">
+      <p>
+        <strong>Figure 1:</strong> Schematic representation of enzyme and acid hydrolysis of kodo millet (<i>Paspalum scrobiculatum</i>) 
+        bran residue for DLA production.
+      </p>
+    </div>
+    <!-- Second Image -->
+    <div class="gallery-item">
+      <img src="img/l2.jpg" alt="Fed-Batch Profiles of DLA">
+      <p>
+        <strong>Figure 2:</strong> Time profiles of concentrations of cell, KMBRH, and DLA in fed-batch (pulse feeding).
+      </p>
+    </div>
+  </div>
+
+  <p>
+    Cassava fibrous waste (CFW) is one of the viable feedstock options for DLA production. The processability of CFW and its 
+    enzymatic hydrolysis was improved by a novel process intensification attempt of integrating a polymer matrix with enzyme i.e., 
+    using a tailor-made electrospun matrix and its application in immobilization of α – amylase enzyme. Fermentation studies 
+    were performed using elite Lactic acid bacteria (LAB) possessing feedstock inhibition capability, which was achieved by adopting 
+    process intensification step involving designed biomass approach (DBA) and inhibition kinetic modeling. The research outcome 
+    offers the knowledge of kinetic parameters, its transformation into operational parameters, which would be helpful for 
+    sustainable synthesis of DLA. 
+  </p>
+    <!-- PHB Production Diagram -->
+    <div class="image-gallery">
+        <div class="wideimg">
+          <img src="img/dla.jpg" alt="PHB Production Representation" class="wide-image">
+          <p class="caption">
+            <strong>Figure 1:</strong> Schematic representation of the PHB production process utilizing millet bran and rapeseed meal hydrolysates. The steps include <i>B. megaterium</i> clone development, growth medium formulation, kinetic studies, and PHB characterization.
+          </p>
+        </div>
+      </div>
+      <p>
+
+  <h3>Poly-3-hydroxybutyrate (PHB)</h3>
+  <p>
+    Poly-3-hydroxybutyrate (PHB) is a storage compound produced by microbial cells that could be utilized during starvation. 
+    Much attention has been attained as it is an attractive alternative to petrochemical plastics, owing to its biodegradability, 
+    thermoplasticity, hydrophobicity, and mechanical properties. Moreover, with its inert properties, PHB encompasses wide 
+    applications in the biomedical and pharmaceutical sectors. 
+  </p>
+  <p>
+    The microbial platform is under the limelight for PHB synthesis because of its high growth rate and yield. The cost of raw material 
+    impedes fermentative (PHB) production at an industrial scale. We successfully tailored <i>B. megaterium</i> to avail waste as a feedstock 
+    (millet bran and rapeseed meal hydrolysates) and achieved an efficient PHB titer.
+  </p>
+
+
+
+
+  <p>
+    Metabolic engineering of <i>B. megaterium</i> is in progress for enhancing PHB titer, ensuring the feasibility of industrial-scale 
+    production. Innovative process engineering approaches and valorization of agro-industrial residues aim to establish a 
+    sustainable and cost-effective biopolymer production system.
+  </p>
+  <div class="image-gallery">
+    <div class="wideimg">
+      <img src="img/wax.jpg" alt="PHB Production Representation" class="wide-image">
+      <p class="caption">
+        <strong>Figure 1:</strong> Schematic representation of the PHB production process utilizing millet bran and rapeseed meal hydrolysates. The steps include <i>B. megaterium</i> clone development, growth medium formulation, kinetic studies, and PHB characterization.
+      </p>
+    </div>
+  </div>
+  <h3>Wax Ester (WE)</h3>
+  <p>
+    Wax ester (WE) is a high-value neutral lipid formed by the conjugation of fatty acid and fatty alcohol. It has numerous 
+    applications such as high-grade lubricants, wound healing, bio-surfactants, gum bases, personal care products, biodiesel 
+    production, etc. Depending on the carbon length and the degree of unsaturation, its physical and chemical properties differ, 
+    and hence the end application is disparate. 
+  </p>
+
+  <p>
+    The global ban and high cost of production of animal and plant waxes were the stumbling blocks for its commercialization. 
+    Alternate methods such as chemical synthesis and immobilized lipase esterification required the supplementation of precursors. 
+    Hence, we have chosen a microbial platform for its production. In silico metabolic engineering of the host organism to identify 
+    the genes that would increase the flux towards WE production rather than its competing pathways is in progress. Bioprocess 
+    optimization studies are underway utilizing recombinant WE-producing strains to achieve high productivity.
+  </p>
+  <div class="image-gallery">
+    <div class="wideimg">
+      <img src="img/w1.jpg" alt="PHB Production Representation" class="wide-image">
+      <p class="caption">
+        <strong>Figure 1:</strong> Schematic representation of the PHB production process utilizing millet bran and rapeseed meal hydrolysates. The steps include <i>B. megaterium</i> clone development, growth medium formulation, kinetic studies, and PHB characterization.
+      </p>
+    </div>
+  </div>
+
+  
+  
+  
+
+  </section>
+  
+<section id="NUTRACEUTICALS" class="content-section">
+  <h2>NUTRACEUTICALS</h2>
+  <h2>BIOPOLYMERS</h2>
+    <p>
+      Hyaluronic acid (HA) is a linear, non-sulphated, anionic muco-heteropolysaccharide made of repetitive monomer units of UDP 
+      N-Acetyl glucosamine (UDP-GlcNAc) and UDP D-Glucuronic acid (UDP-GlcUA) alternately. The colossal significance of HA 
+      finds its application in the areas of medicine and cosmetics, such as drug delivery, osteoarthritis and ophthalmology surgery, 
+      wound healing, tissue engineering, moisturizer, dermal filler, etc. The molecular weight of HA is a critical quality attribute 
+      that determines its usage in various end applications and demands attention to achieve the consistent quality of the final product.
+    </p>
+  
+    <!-- Hyaluronic Acid Structure -->
+    <div class="image-gallery">
+      <div class="gallery-item">
+        <img src="img/b1.jpg" alt="Hyaluronic Acid Molecular Structure">
+        <p><strong>Figure 1:</strong> Molecular structure of hyaluronic acid.</p>
+      </div>
+    </div>
+  
+    <p>
+      The complexity in the HA production process has more to be dealt with the process engineering maneuvers than the genetic 
+      engineering approaches. Our lab designed different process strategies and successfully utilized PAT tools on monitoring and 
+      control of various critical process parameters (CPPs) influencing HA titer and molecular weight. Application of recombinant 
+      GRAS organisms as host is in progress to achieve high molecular HA production.
+    </p>
+  <p>Explore the various courses we offer to empower your learning.</p>
+</section>
+<section id="REAL-TIME MONTIORING AND CONTROL" class="content-section">
+  <h2>REAL-TIME MONTIORING AND CONTROL</h2>
+  <p>Meet our expert faculty driving excellence in education and research.</p>
+</section>
+<section id="FUNDING AGENCY" class="content-section">
+  <h2>FUNDING AGENCY</h2>
+  <p>Discover the range of programs designed for academic and professional growth.</p>
+</section>
+<section id="COLLABORATORS" class="content-section">
+  <h2>COLLABORATORS</h2>
+  <p>Contact us for inquiries and collaborations.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/Research.js"></script>
+
+<script>
+  let lastScrollTop = 0; // Store the previous scroll position
+  // Show Sidebar
+  function showSidebar(event) {
+      event.preventDefault(); // Prevent default action
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'flex';
+  }
+
+  // Hide Sidebar
+  function hideSidebar(event) {
+      event.preventDefault(); // Prevent default action
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'none';
+  }
+
+  // Scroll functionality for Top Bar and Navbar
+
+  window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollY > 40) {
+          navbar.classList.add('scrolled'); // Add fixed navbar style
+      } else {
+          navbar.classList.remove('scrolled'); // Remove fixed navbar style
+      }
+
+      lastScrollTop = scrollY; // Update scroll position
+  });
+</script>
+
+
+
+    <script>
+      let lastScrollTop = 0; // Store the previous scroll position
+    
+      window.addEventListener('scroll', function () {
+          const topBar = document.querySelector('.top-bar1');
+          const navbar = document.querySelector('nav');
+          let scrollY = window.scrollY || document.documentElement.scrollTop;
+    
+          // Hide Top Bar when scrolling down
+          if (scrollY > 50) {
+              topBar.classList.add('hidden');
+              navbar.classList.add('scrolled');
+          } else {
+              topBar.classList.remove('hidden');
+              navbar.classList.remove('scrolled');
+          }
+    
+          // Navbar reappears when scrolling up
+          if (scrollY < lastScrollTop) {
+              navbar.style.top = '0'; // Show navbar
+          } else {
+              navbar.style.top = '-100px'; // Slide up navbar
+          }
+    
+          lastScrollTop = scrollY; // Update the scroll position
+      });
+    </script>
+
+
+<script>
+window.addEventListener("scroll", function () {
+  const sidebar = document.getElementById("vertical-sidebar");
+  const topBar = document.querySelector(".top-bar1");
+  const navbar = document.getElementById("navbar");
+  const imageContainer = document.querySelector(".image-container");
+
+  // Get scroll position
+  let scrollY = window.scrollY || document.documentElement.scrollTop;
+
+  // Calculate heights dynamically
+  const topBarHeight = parseInt(getComputedStyle(topBar).height);
+  const navbarHeight = parseInt(getComputedStyle(navbar).height);
+  const imageHeight = imageContainer.offsetHeight;
+  const totalHeight = topBarHeight + navbarHeight + imageHeight;
+
+  // Improved logic for dynamic sidebar behavior
+  if (scrollY > (totalHeight - topBarHeight)) {
+    // Fix sidebar at top for scrolling down
+    sidebar.style.position = "fixed";
+    sidebar.style.top = "53px"; // Adjust offset according to your needs
+  } else if (scrollY > 0) {
+    // Adjust sidebar height and position for scrolling up, respecting image
+    const sidebarHeight = Math.min(window.innerHeight - topBarHeight - navbarHeight, imageHeight);
+    sidebar.style.position = "absolute";
+    sidebar.style.top = `${totalHeight - topBarHeight}px`;
+    sidebar.style.height = `100vw`;
+  } else {
+    // Reset sidebar position for top of page
+    sidebar.style.position = "fixed";
+    sidebar.style.top = `${totalHeight}px`; // Ensure no overlap
+    sidebar.style.height = "100%"; // Allow natural height
+  }
+});
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sidebarLinks = document.querySelectorAll("#vertical-sidebar a");
+      const navbarHeight = document.getElementById("navbar").offsetHeight; // Get navbar height
+  
+      sidebarLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent the default anchor click behavior
+  
+          const targetId = this.getAttribute("href").substring(1); // Get the target section ID
+          const targetSection = document.getElementById(targetId);
+  
+          if (targetSection) {
+            const sectionPosition = targetSection.offsetTop; // Get section's top position
+            const scrollOffset = sectionPosition - navbarHeight - 20; // Adjust for navbar height + extra space
+  
+            window.scrollTo({
+              top: scrollOffset,
+              behavior: "smooth", // Smooth scrolling effect
+            });
+          }
+        });
+      });
+    });
+  </script>
+  
+
+
+
+
+<script>
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeModal = document.querySelector('.modal-close');
+
+    // Attach click event to all images with the class modal-trigger
+    document.querySelectorAll('.modal-trigger').forEach((img) => {
+        img.addEventListener('click', function () {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+        });
+    });
+
+    // Close modal when clicking on the close button
+    closeModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the image
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
+
+
+
+    
+
+</body>
+
+</html>

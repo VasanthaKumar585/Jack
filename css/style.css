@@ -1,0 +1,632 @@
+:root {
+    --primary: #0c0074;
+    --secondary: #757575;
+    --light: #F3F6F8;
+    --dark: #0C2B4B;
+
+ /* Dynamically adjusting heights */
+ --top-bar-height: clamp(40px, 5vw, 60px); /* Min 35px, responsive, max 60px */
+ --min-font-size: clamp(2vw, 2.2vw, 2.3vw);
+ --navbar-height: clamp(40px, 5vw, 60px);  /* Min 20px, responsive, max 50px */
+ --video-container-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+ --content-container-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+ --top-image-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+ --bottom-image-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+ --footer-height:clamp(90px, 25vw, 700px);
+ --font-size:clamp(10px, 1.2vw, 30px);
+ --footer-title-font-size:clamp(30px, 3vw, 40px);
+ --footer-content-font-size:clamp(5px, 2vw, 20px);
+
+ /* Responsive font sizes */
+ --font-size-desktop: clamp(14px, 1.5vw, 18px); /* Min 14px, responsive, max 18px */
+ --font-size-mobile: clamp(12px, 1.2vw, 16px);  /* Min 12px, responsive, max 16px */
+
+ /* Sidebar width responsive */
+ --sidebar-width: clamp(200px, 30vw, 250px); /* Min 200px, responsive, max 250px */
+}
+
+
+@font-face {
+    font-family: 'KC Obra Letra';
+    src: url('../font/subset-KCObraLetraBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../font/subset-Lexend-Regular.woff2') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('../font/PlayfairDisplay-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Benedict';
+    src: url('../font/Benedict\ Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond'; /* Name of the font */
+    src: url('../font/EBGaramond08-Regular.woff') format('woff'); /* Path to the font file */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+    font-display: swap; /* Optional: Fallback text display while font loads */
+}
+@font-face {
+    font-family: 'Montserrat'; /* Name of the font */
+    src: url('../font/monserrat/Montserrat-Regular.woff2') format('woff2'); /* Path to the font file */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+    font-display: swap; /* Optional: Fallback text display while font loads */
+}
+
+
+/* Set height for parent elements */
+html, body {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box;
+    font-family: garamond, sans-serif;
+}
+
+body {
+    font-family: 'KC Obra Letra', sans-serif;
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+}
+
+
+
+
+
+/* Top Bar */
+.top-bar1 {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    height: var(--top-bar-height); /* Dynamically adjust height */
+    width: 100%;
+    z-index: 1000;
+    transition: height 0.3s ease, opacity 0.5s ease, top 0.5s ease;
+}
+
+
+/* Top Bar Scroll Effect */
+.top-bar1.hidden {
+    opacity: 0;
+    top: -50px;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+
+/* Navbar Scroll Effect */
+nav.scrolled {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: top 0.5s ease, opacity 0.5s ease;
+    z-index: 10000;
+}
+
+.navbar-brand {
+    display: flex;
+    position: absolute;
+    max-height: var(--top-bar-height);
+    height: 100%;
+    width: auto;
+    white-space: nowrap;
+
+}
+/* Bioprocess Text */
+.top-bar1 h21 {
+    font-family: "montserrat", sans-serif;
+    font-style: normal;
+    font-size: 2.3vw;
+    color: white;
+    align-self: center;
+    position: absolute;
+    margin-left: 23vw;
+    margin-right: 20vh;
+    box-sizing: border-box;
+}
+
+/* Hover Effect */
+.top-bar1:hover {
+    opacity: 0.8; /* Slightly fade on hover */
+}
+
+/* When scrolled */
+.top-bar1.scrolled {
+    opacity: 0.5;
+    top: -50px; /* Moves the bar upwards */
+}
+
+/* Hidden state for .top-bar */
+.hidden {
+    opacity: 0;
+    top: -50px;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+/*End of Top Bar*/
+
+
+
+/* Navigation Bar */
+nav {
+    position: relative; /* Fixed to ensure visibility when it reappears */
+    height: var(--navbar-height);
+    width: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99911;
+}
+
+/* Show Navigation Bar */
+nav.visible {
+    opacity: 1; /* Make visible */
+    pointer-events: auto; /* Enable interactions */
+}
+
+/* Navigation List */
+nav ul {
+    width: 100%; /* Full width */
+
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Align items horizontally */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navigation Items */
+nav li {
+    height: 40px; /* Match the height of the navbar */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center content vertically */
+}
+
+
+/* Navigation Links */
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    font-size: clamp(14px, 1.2vw, 18px); /* Responsive font size */
+    text-decoration: wavy; /* Remove underline */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center content vertically */
+    color: #0b088f;
+    transition: color 0.2s ease, background-color 0.2s ease; /* Smooth hover effect for color and background */
+    display: flex;
+    align-items: center;
+    color: black;
+}
+/* Active Link Styling */
+nav a.active {
+    color: #F3BD00; /* Change text color for active website button */
+    font-weight:lighter; 
+    text-decoration: none; /* Remove underline */
+    background-color: rgba(255, 255, 255, 0); /* Subtle background for active link */
+    transition: color 0.2s ease, background-color 0.2s ease; /* Smooth transition */
+}
+
+
+/* Hover Effect */
+nav a:hover {
+    text-decoration: wavy;
+    color: #F3BD00; /* Change text color */
+    background-color: #0C2B4B; /* Optional: Add a background color on hover */
+
+}
+
+nav li:first-child {
+    margin-right: 0; /* Push all other items to the right */
+}
+
+.sidebar{
+  position: fixed;
+  margin-top: var(--top-bar-height);
+  top: 0;
+  right: 0;
+  height: 240px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+  }
+.sidebar a{
+    width: 100%;
+  }
+
+  .menu-button{
+    display: none;
+  }
+  @media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+
+
+/* Video Container */
+.video-container {
+    position: relative; /* Changed from 'fixed' to 'relative' */
+    width: 100%;
+    padding: 0px;
+    overflow: hidden;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 0; /* Ensure video is below text */
+}
+
+/* Video Style */
+.video-container video {
+    width: 100%;
+    height: var(--video-container-height);
+    object-fit: cover;
+    display: block;
+}
+
+/* Video Caption */
+.video-caption {
+    position: absolute; /* Keeps caption inside video container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    z-index: 2; /* Ensure text appears on top of the video */
+}
+
+/* h1 Caption Style */
+.video-caption h1 {
+    font-family: Benedict, sans-serif;
+    font-weight: normal;
+    font-size: 7vw;
+    width: 100%;
+    color: white;
+    text-shadow: 3px 3px 8px rgb(153, 153, 153);
+    margin: 0; /* Remove unnecessary margins */
+}
+
+/* Dark overlay over the video */
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--video-container-height);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+
+
+
+/* Content Container */
+.content-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container1 {
+    width: 100%; /* Adjust the width to allow space for the paragraph */
+    display: flex;
+    width: 100%;
+}
+
+.image-caption{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-family: Garamond;
+    font-size: 1.2vw;
+    color: black;
+    width: 70%;
+    z-index: 2;
+}
+
+.responsive-image {
+    width: 100%;
+    position:relative;
+    display: flex;
+    z-index: 1;
+}
+
+
+
+/* Centered Paragraph */
+.text-container p1 {
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+        /* Footer Styles */
+        .footer {
+            position: relative;
+            background-color: #037f9f;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Proper alignment */
+            align-items: center;
+            padding: 5px;
+            box-sizing: border-box;
+            color: #fafafa;
+            position:relative;
+            border: #F3BD00 solid 3px;
+        }
+.footer a{
+    align-items: center;
+}
+        /* Section Styling */
+        .footer .contact, .footer .resources, .footer iframe {
+            width: 32%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: left; /* Ensures left alignment */
+        }
+
+        .footer h3 {
+            color: #F3BD00;
+            font-size: 1.6rem;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        /* List Styling */
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer ul li {
+            display: flex;
+            align-items: center; /* Align icon and text vertically center */
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .footer ul li img {
+            object-fit: contain;
+            margin-right: 10px;
+            flex-shrink: 0;
+            width: 25px;
+            height: 25px;
+        }
+
+        /* Specific alignment for location text */
+        .footer ul li img.location {
+            align-self: flex-start; /* Keeps location icon aligned to the top */
+            margin-top: 15px;
+            width: 25px;
+            height: 30px;
+        }
+
+        .footer ul li div span {
+            display: block;
+        }
+
+        /* Anchor Styling */
+        .footer a {
+            text-decoration: none;
+            color: #fafafa;
+            display: flex;
+            align-items: center; /* Vertical alignment of icon and text */
+        }
+
+        .footer a img {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        a:active {
+            text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF; /* Cyan glow */
+            color: #00FFFF; /* Matches the glow color */
+            transition: text-shadow 0.3s ease, color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #f6d30f; /* Matches the glow color */
+            transition: text-shadow 0.5s ease, color 0.5s ease;
+        }
+        
+        
+
+        /* Map Styling */
+        .footer iframe {
+            width: 30%;
+            height: 230px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgb(0, 0, 0);
+        }
+        .footer iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgb(255, 204, 0);
+            transition: fade 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        /* Mobile View */
+        @media (max-width: 800px) {
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            .footer iframe {
+                width: 80% !important; /* Keeps the size fixed in mobile view */
+                height: 300px !important; /* Keeps the height fixed */
+
+            }
+                    /* Section Styling *//*
+        .footer .contact, .footer .resources, .footer iframe {
+            width: 80%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center; /* Ensures left alignment *//*
+        }
+        }
+        .footer h3 {
+            color: #F3BD00;
+            font-size: 1.2rem;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        /* List Styling *//*
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer ul li {
+            display: flex;
+            align-items: center; /* Align icon and text vertically center *//*
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-wrap: nowrap; /* Keep icons and text in the same line *//*
+        }
+
+        .footer ul li img {
+            object-fit: contain;
+            margin-right: 10px;
+            flex-shrink: 0;
+            width: 25px;
+            height: 25px;
+        }
+
+        /* Specific alignment for location text *//*
+        .footer ul li img.location {
+            align-self: flex-start; /* Keeps location icon aligned to the top *//*
+            margin-top: 15px;
+            width: 25px;
+            height: 30px;
+        }
+
+        .footer ul li div span {
+            display: block;
+        }
+
+        /* Anchor Styling *//*
+        .footer a {
+            text-decoration: none;
+            color: #fafafa;
+            display: flex;
+            align-items: center; /* Vertical alignment of icon and text *//*
+        }
+
+        .footer a img {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        a:active {
+            text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF; /* Cyan glow *//*
+            color: #00FFFF; /* Matches the glow color *//*
+            transition: text-shadow 0.3s ease, color 0.3s ease;
+        }
+        
+        a:hover {/*
+            color: #f6d30f; /* Matches the glow color *//*
+            transition: text-shadow 0.5s ease, color 0.5s ease;
+        }
+        
+        
+
+        /* Map Styling *//*
+        .footer iframe {
+            width: 30%;
+            height: 230px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgb(0, 0, 0);
+        }
+        .footer iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgb(255, 204, 0);
+            transition: fade 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+        }
+

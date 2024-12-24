@@ -1,0 +1,427 @@
+
+:root {
+--primary: #0c0074;
+--secondary: #757575;
+--light: #F3F6F8;
+--dark: #0C2B4B;
+
+/* Dynamically adjusting heights */
+--top-bar-height: clamp(40px, 5vw, 60px); /* Min 35px, responsive, max 60px */
+--min-font-size: clamp(2vw, 2.2vw, 2.3vw);
+--navbar-height: clamp(40px, 5vw, 60px);  /* Min 20px, responsive, max 50px */
+--video-container-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+--content-container-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+--top-image-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+--bottom-image-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+--footer-height:clamp(90px, 25vw, 700px);
+--font-size:clamp(10px, 1.2vw, 30px);
+--footer-title-font-size:clamp(30px, 3vw, 40px);
+--footer-content-font-size:clamp(5px, 2vw, 20px);
+--sirbar-height: clamp(22vw, 8vw, 19vw);
+
+--transition-duration: 0.8s;
+
+
+
+
+/* Responsive font sizes */
+--font-size-desktop: clamp(14px, 1.5vw, 18px); /* Min 14px, responsive, max 18px */
+--font-size-mobile: clamp(12px, 1.2vw, 16px);  /* Min 12px, responsive, max 16px */
+
+/* Sidebar width responsive */
+--sidebar-width: clamp(200px, 30vw, 250px); /* Min 200px, responsive, max 250px */
+}
+
+
+@font-face {
+font-family: 'kcobraletra';
+src: url('../font/KCObraLetraRegular.woff2') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Beckman';
+src: url('../font/subset-BeckmanFREE.woff2') format('woff2');
+font-weight: bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Lexend';
+src: url('../font/subset-Lexend-Regular.woff2') format('woff2');
+font-weight: bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Playfair';
+src: url('../font/PlayfairDisplay-Regular.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Benedict';
+src: url('../font/Benedict\ Regular.woff') format('woff');
+font-weight: bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Garamond'; /* Name of the font */
+src: url('../font/EBGaramond08-Regular.woff') format('woff'); /* Path to the font file */
+font-weight: normal; /* Specify the font weight */
+font-style: normal; /* Specify the font style */
+font-display: swap; /* Optional: Fallback text display while font loads */
+}
+@font-face {
+font-family: 'Montserrat'; /* Name of the font */
+src: url('../font/monserrat/Montserrat-Regular.woff') format('woff2'); /* Path to the font file */
+font-weight: normal; /* Specify the font weight */
+font-style: normal; /* Specify the font style */
+font-display: swap; /* Optional: Fallback text display while font loads */
+}
+@font-face {
+font-family: 'Tex-gyre'; /* Name of the font */
+src: url('../font/monserrat/subset-TeXGyreTermes-Regular.woff2') format('woff2'); /* Path to the font file */
+font-weight: normal; /* Specify the font weight */
+font-style: normal; /* Specify the font style */
+}
+
+
+/* Set height for parent elements */
+html, body {
+scroll-behavior: smooth;
+margin: 0; /* Remove default margins */
+padding: 0; /* Remove default padding */
+box-sizing: border-box;
+font-family: garamond, sans-serif;
+}
+
+body {
+font-family: 'KC Obra Letra', sans-serif;
+display: flex;
+flex-direction: column; /* Align elements vertically */
+}
+
+
+
+
+
+/* Top Bar */
+.top-bar1 {
+background-color: #000;
+display: flex;
+align-items: center;
+position: relative;
+top: 0;
+height: var(--top-bar-height); /* Dynamically adjust height */
+width: 100%;
+z-index: 1000;
+transition: height 0.3s ease, opacity 0.5s ease, top 0.5s ease;
+}
+
+
+/* Top Bar Scroll Effect */
+.top-bar1.hidden {
+opacity: 0;
+top: -50px;
+transition: opacity 0.5s ease, top 0.5s ease;
+}
+
+/* Navbar Scroll Effect */
+nav.scrolled {
+position: fixed;
+top: 0;
+background-color: #ffffff;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+transition: top 0.5s ease, opacity 0.5s ease;
+z-index: 10000;
+}
+
+.navbar-brand {
+display: flex;
+position: absolute;
+max-height: var(--top-bar-height);
+height: 100%;
+width: auto;
+white-space: nowrap;
+
+}
+/* Bioprocess Text */
+/* Bioprocess Text */
+.top-bar1 h21 {
+font-family: "montserrat", sans-serif;
+font-style: normal;
+font-size: 2.3vw;
+color: white;
+align-self: center;
+position: absolute;
+margin-left: 23vw;
+margin-right: 20vh;
+box-sizing: border-box;
+}
+
+/* Hover Effect */
+.top-bar1:hover {
+opacity: 0.8; /* Slightly fade on hover */
+}
+
+/* When scrolled */
+.top-bar1.scrolled {
+opacity: 0.5;
+top: -50px; /* Moves the bar upwards */
+}
+
+/* Hidden state for .top-bar */
+.hidden {
+opacity: 0;
+top: -50px;
+transition: opacity 0.5s ease, top 0.5s ease;
+}
+/*End of Top Bar*/
+
+
+
+/* Navigation Bar */
+nav {
+position: relative; /* Fixed to ensure visibility when it reappears */
+height: var(--navbar-height);
+width: 100%;
+background-color: white;
+box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 99911;
+}
+
+/* Show Navigation Bar */
+nav.visible {
+opacity: 1; /* Make visible */
+pointer-events: auto; /* Enable interactions */
+top: var(--top-bar-height); /* Fixed position below the top bar */
+}
+
+/* Navigation List */
+nav ul {
+width: 100%; /* Full width */
+list-style: none; /* Remove bullet points */
+display: flex; /* Align items horizontally */
+justify-content: flex-end; /* Align items to the right */
+align-items: center; /* Center items vertically */
+margin: 0; /* Remove default margin */
+padding: 0; /* Remove default padding */
+}
+
+/* Navigation Items */
+nav li {
+height: 40px; /* Match the height of the navbar */
+display: flex; /* Flexbox for alignment */
+align-items: center; /* Center content vertically */
+}
+
+
+/* Navigation Links */
+nav a {
+height: 100%;
+padding: 0 30px;
+font-size: clamp(14px, 1.2vw, 18px); /* Responsive font size */
+text-decoration: wavy; /* Remove underline */
+display: flex; /* Flexbox for alignment */
+align-items: center; /* Center content vertically */
+color: #0b088f;
+transition: color 0.2s ease, background-color 0.2s ease; /* Smooth hover effect for color and background */
+display: flex;
+align-items: center;
+color: black;
+}
+/* Active Link Styling */
+nav a.active {
+color: #F3BD00; /* Change text color for active website button */
+font-weight:lighter; 
+text-decoration: none; /* Remove underline */
+background-color: rgba(255, 255, 255, 0); /* Subtle background for active link */
+transition: color 0.2s ease, background-color 0.2s ease; /* Smooth transition */
+}
+
+
+/* Hover Effect */
+nav a:hover {
+text-decoration: wavy;
+color: #F3BD00; /* Change text color */
+background-color: #0C2B4B; /* Optional: Add a background color on hover */
+
+}
+
+nav li:first-child {
+margin-right: 0; /* Push all other items to the right */
+}
+
+.sidebar{
+position: fixed;
+margin-top: var(--top-bar-height);
+top: 0;
+right: 0;
+height: 240px;
+width: 200px;
+background-color: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(10px);
+box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+list-style: none;
+display: none;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+}
+.sidebar li{
+width: 100%;
+}
+.sidebar a{
+width: 100%;
+}
+
+.menu-button{
+display: none;
+}
+@media(max-width: 800px){
+.hideOnMobile{
+display: none;
+}
+.menu-button{
+display: block;
+}
+}
+@media(max-width: 400px){
+.sidebar{
+width: 100%;
+}
+}
+
+
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 36.1vw; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.bioprocess {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.image-text h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.image-text p {
+  margin: 10px 0 0;
+  font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+/* Sidebar Styles */
+#vertical-sidebar {
+  position: absolute; /* Initial state */
+  left: 0; /* Align to the left */
+  width: 240px; /* Fixed width */
+  height: calc(100vh - var(--top-bar-height)); /* Full height minus top bar */
+  background-color: #333;
+  z-index: 1000;
+  transition: top 0.3s ease, position 0.3s ease; /* Smooth transitions */
+}
+
+
+
+
+
+#vertical-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#vertical-sidebar ul li {
+  width: 100%;
+}
+
+#vertical-sidebar ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#vertical-sidebar ul li a:hover {
+  background-color: #444;
+}
+
+#vertical-sidebar ul li a.active {
+  background-color: #555;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Section Styles */
+.content-section {
+  margin-left: 240px; /* Leave space for the sidebar */
+  padding: 20px;
+  height: 100vh;
+}
+
+#header {
+  background-color: #f4f4f4;
+}
+
+#about {
+  background-color: #ddd;
+}
+
+#courses {
+  background-color: #bbb;
+}
+
+#teachers {
+  background-color: #999;
+}
+
+#programs {
+  background-color: #777;
+}
+
+#contact {
+  background-color: #555;
+  color: white;
+}

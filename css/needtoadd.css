@@ -1,0 +1,340 @@
+/* Adjust padding for smaller screens */
+@media (max-width: 992px) {
+    .top-bar1 h21 {
+        margin-top: 1.8vw;
+        padding-left: 15vw; /* Reduce padding to 10% of the viewport width */
+        padding-right: 15vw; /* Reduce padding to 10% of the viewport width */
+    }
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 768px) {
+    .top-bar1 h21 {
+        margin-top: 1.5vw;
+        padding-left: 10vw; /* Reduce padding to 10% of the viewport width */
+        padding-right: 10vw; /* Reduce padding to 10% of the viewport width */
+    }
+}
+
+/* Further reduce padding for very small screens */
+@media (max-width: 576px) {
+    .top-bar1 h21 {
+        padding-left: 8vw; /* Reduce padding to 8% of the viewport width */
+        padding-right: 5vw; /* Reduce padding to 5% of the viewport width */
+        font-size: clamp(1px, 3vw, 24px); /* Adjust font size for small screens */
+    }
+}
+
+
+/* Hover Effect */
+.top-bar:hover {
+    opacity: 0.8; /* Slightly fade on hover */
+}
+
+/* When scrolled */
+.top-bar.scrolled {
+    opacity: 0.5;
+    top: -50px; /* Moves the bar upwards */
+}
+
+/* Hidden state for .top-bar */
+.hidden {
+    opacity: 0;
+    top: -50px;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+/*End of Top Bar*/
+
+
+/* Navigation Bar */
+nav {
+    position: relative; /* Ensure it respects the flow of the document */
+    margin-top: var(--top-bar-height); /* Position it directly below the top bar */
+    height: var(--navbar-height); /* Set height based on the defined variable */
+    background-color: white; /* White background */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for premium look */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Spread items across the width */
+    align-items: center; /* Center items vertically */
+    z-index: 999; /* Ensure it stays above other content */
+    font-size: var(--font-size-desktop); /* Default font size for desktop */
+    transition: font-size 0.1s ease; /* Smooth transition for font size */
+    padding-right: 40px;
+}
+
+/* Navigation List */
+nav ul {
+    width: 100%; /* Full width */
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Align items horizontally */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navigation Items */
+nav li {
+    height: 50px; /* Match the height of the navbar */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center content vertically */
+}
+
+/* Navigation Links */
+nav a {
+    height: var(--navbar-height+--navbar-height); /* Match the height of the navbar */
+    padding: 14px 14px; /* Horizontal padding for spacing */
+    font-size: var(--font-size-desktop); /* Default font size for desktop */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center content vertically */
+    color: #0b088f;
+    transition: color 0.2s ease, background-color 0.2s ease; /* Smooth hover effect */
+}
+
+
+/* Active Link Styling */
+nav a.active {
+    color: hsl(52, 100%, 49%); /* Change text color */
+    font-weight: bold; /* Highlight with bold text */
+    background-color: rgba(246, 246, 246, 0.2); /* Subtle background for active link */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: color 0.2s ease, background-color 0.2s ease; /* Smooth transition */
+}
+
+
+
+/* Hover Effect */
+nav a:hover {
+    text-decoration: none; /* Prevent underline on hover */
+    color: hsl(56, 93%, 44%); /* Change text color */
+    background-color: rgba(246, 246, 246, 0.2); /* Optional: Add a background color on hover */
+    border-radius: 5px; /* Optional: Rounded corners for hover effect */
+}
+
+/* Ensure the first navigation item (logo or home) is aligned to the left */
+nav li:first-child {
+    margin-right: 0; /* Push all other items to the right */
+}
+
+
+/* Sidebar for Mobile */
+.sidebar {
+    position:fixed;/* Fixed positioning for sidebar */
+    padding-top: 250px; /* Start below the top bar and navigation bar */
+    right: 0;
+    width: var(--sidebar-width); /* Use customizable width */
+    background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    backdrop-filter: blur(12px); /* Blur effect */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    list-style: none; /* Remove bullet points */
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Start from the top */
+    font-size: var(--font-size-mobile); /* Use mobile font size */
+    z-index: 99999; /* Ensure it stays above other content */
+}
+
+
+/* Sidebar Items */
+.sidebar li {
+    position: relative;
+    width: 100%; /* Full width for items */
+    height: 50px; /* Match the height of the navbar */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center content vertically */
+}
+
+/* Sidebar Links */
+.sidebar a {
+    width: 100%; /* Full width for links */
+}
+
+/* Menu Button for Mobile */
+.menu-button {
+    display: none; /* Hidden by default */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 800px) {
+    nav {
+        font-size: var(--font-size-mobile); /* Use smaller font size on mobile */
+        height: ;
+    }
+
+    .hideOnMobile {
+        display: none; /* Hide elements on mobile */
+    }
+
+    .menu-button {
+        display: block; /* Show the menu button on mobile */
+    }
+
+    .sidebar {
+        display: flex; /* Show sidebar on mobile */
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%; /* Full width sidebar for small screens */
+    }
+}
+
+/*End of Navigation Bar*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Video Container */
+.video-container {
+    position: relative; /* Changed to relative for proper video positioning */
+    padding: 0px;
+    overflow: hidden;
+    height: 50vh; /* 50% of viewport height */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the video aspect ratio intact */
+    display: block;
+}
+
+.video-caption {
+    position: absolute; /* Absolute for precise centering within the container */
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%);
+    width: 90%; /* Optional: Allows text wrapping for smaller screens */
+    text-align: center;
+    z-index: 2; /* Ensures it's above the video */
+}
+
+
+@font-face {
+    font-family: 'KC Obra Letra';
+    src: url('../font/subset-KCObraLetraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EB Garamond'; /* Name of the font */
+    src: url('../font/EBGaramond08-Regular.woff') format('woff'); /* Path to the font file */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+    font-display: swap; /* Optional: Fallback text display while font loads */
+}
+@font-face {
+    font-family: 'Montserrat'; /* Name of the font */
+    src: url('../font/monserrat/Montserrat-Regular.woff') format('woff'); /* Path to the font file */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+    font-display: swap; /* Optional: Fallback text display while font loads */
+}
+
+
+
+.video-caption h1 {
+    font-family: EB Garamond;
+    font-weight: normal; /* Matches the bold font */
+    white-space: normal; /* Allow text to wrap */
+    line-height: 1.2; /* Adjust line height */
+    margin: 20px; /* Reduced margin for better spacing */
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.9); /* Bright white */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for visibility */
+}
+
+/* Dark overlay over the video */
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensures it’s below the caption */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 991.98px) {
+    .video-caption h1 {
+        font-size: 3rem; /* Smaller font size for narrow screens */
+        margin: 15px;
+        padding: 5px;
+    }
+}
+
+/* Media query for higher screens */
+@media (min-width: 512px) {
+    .video-caption h1 {
+        font-size: 10rem; /* Slightly larger for wide screens */
+        margin: 30px;
+        padding: 10px;
+    }
+}
+
+
+
+@font-face {
+    font-family: 'CustomFont'; /* Replace with your desired name */
+    src: url('font/CustomFont.woff') format('woff');
+    font-weight: normal; /* Optional: Specify the weight */
+    font-style: normal; /* Optional: Specify the style */
+}
+
+
+.image-container {
+    width: 100%;
+    text-align: center;
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 600px; /* Optional: Limit the maximum width of the image */
+    height: auto;
+}
+
+.text-container {
+    text-align: center;
+    max-width: 800px; /* Optional: Limit paragraph width */
+    margin: 0 auto;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Page content container */
+.content-container {
+    margin-top: calc(var(--top-bar-height) + var(--navbar-height)); /* Adjust based on navbar and top bar */
+    height: var(--content-height); /* Use remaining height dynamically */
+    overflow-y: auto; /* Add scroll for overflow content */
+    background-color: var(--light); /* Optional: Add background color */
+    padding: 20px; /* Add padding for inner content */
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!-- Lab ICON in TAB -->
+    <link href="img/lab_logo.ico" rel="icon">
+
+    <!-- Customized Java Script -->
+    <script src="js/New.js"></script>
+
+    <!-- Customized Style Sheet -->
+    <link href="css/style_Profile.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- start preloader -->
+		<div class="preloader">
+			<div class="sk-spinner sk-spinner-wave">
+     	 		<div class="sk-rect1"></div>
+       			<div class="sk-rect2"></div>
+       			<div class="sk-rect3"></div>
+      	 		<div class="sk-rect4"></div>
+      			<div class="sk-rect5"></div>
+     		</div>
+    	</div>
+        <script>
+            document.addEventListener("scroll", () => {
+                const topBar = document.querySelector(".top-bar");
+                if (window.scrollY > 400) {
+                    topBar.style.opacity = "1000"; /* Fade out */
+                    topBar.style.top = "-50px"; /* Slide up */
+                } else {
+                    topBar.style.opacity = "100"; /* Fade in */
+                    topBar.style.top = "0"; /* Slide down */
+                }
+            });
+        </script>
+    <!-- end preloader -->
+
+    <!-- Topbar Start -->
+    <div class="top-bar1" id="top-bar">
+        <a href="index.html" class="navbar-brand">
+            <img src="img/Lab_logo.png" alt="Lab Icon">
+            <h21>BIO PROCESS ANALYTICAL TECHNOLOGY LABORATORY</h21>
+        </a>
+    </div>
+    <!-- Topbar End --> 
+
+
+
+
+
+<!-- Navbar Start -->
+<nav id="navbar">
+    <!-- Sidebar for Mobile View -->
+    <ul class="sidebar">
+        <li onclick="hideSidebar(event)">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                    <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+                </svg>
+            </a>
+        </li>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="profile.html" class="active">Profile</a></li>
+        <li><a href="Research.html">Research</a></li>
+        <li><a href="Our_Team.html">Our Team</a></li>
+        <li><a href="Publications.html">Publications</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  
+    <!-- Main Navbar -->
+    <ul>
+        <li class="hideOnMobile"><a href="index.html" >Home</a></li>
+        <li class="hideOnMobile"><a href="profile.html" class="active">Profile</a></li>
+        <li class="hideOnMobile"><a href="Research.html">Research</a></li>
+        <li class="hideOnMobile"><a href="Our_Team.html">Our Team</a></li>
+        <li class="hideOnMobile"><a href="Publications.html">Publications</a></li>
+        <li class="hideOnMobile"><a href="Contact.html">Contact</a></li>
+        <li class="menu-button" onclick="showSidebar(event)">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                    <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+  </nav>
+  <!-- Navbar End -->
+
+    <!-- Sir Content start -->
+<div class="content-container">
+    <img src="img/sirbg.png" alt="Background Image" class="responsive-image">
+    <img src="img/University white logo.png" alt="University Logo" class="logo-image">
+    <img src="img/sir_pic1.jpg" alt="sir pic" class="sir-image">
+    <div class="image-caption">
+        <h1>Dr. Senthil Kumar Sivaprakasam</h1>
+        <h2>Professor</h2>
+        <h3>Department of Biosciences and Bioengineering</h3>
+        <h3>Indian Institute of Technology Guwahati</h3>
+        <h4><a href="index.html"> <span>BioPAT Laboratory</span></a></h4>
+    </div>
+</div>
+<div class="content-part">
+    
+
+
+    <!--side bar and its content-->
+    <div class="columnsidebar">
+        <div class="side-img">
+        <div class="image-caption1">
+            <h5>Contact</h5>
+            <ul>
+                <li>
+                    <a href="https://maps.app.goo.gl/6t9XXHndQj7QopKN8" target="_blank">
+                        <img src="img/location marck.png" alt="Location Icon" class="location1">
+                        <span>Room no. 10, First Floor, N Block,
+                            Department of Biosciences and Bioengineering, 
+                            IIT Guwahati, Guwahati (Assam)-781039</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:senthilkumar@iitg.ac.in">
+                        <img src="img/gmail cntact.png" class="gmailicon">
+                        <span>senthilkumar@iitg.ac.in</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+913612582226">
+                        <img src="img/call contact.png" class="phoneicon">
+                        <span>Phone: +91-361-2582226</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="fax:+913612582249">
+                        <img src="img/Fax.png" class="faxicon">
+                        <span>Fax No.: +91-361-2582249</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="image-caption11">
+                <h6>Courses Handling</h6>
+                <ul>
+                    <li>1. Bioprocess Engineering </li>
+                    <li>2. Biochemical Engineering </li>
+                    <li>3. Biochemical Engineering Lab </li>
+                    <li>4. Mass Transfer Operations  </li>
+                    <li>5. Chemical Process Calculations </li>
+                    <li>6. Biochemical Engineering </li>
+                    <li>7. Biomolecular and Cellular Process Engineering </li>
+                    <li>8. Biochemical Process Calculations </li>
+                </ul>
+            </div>
+            <div class="image-caption111">
+                <h2>Journal Reviewing</h2>
+                <ul class="my-specific-list"> 
+                    <li>Applied Energy</li>
+                    <li>Applied Biochemistry and Biotechnology</li>
+                    <li>Applied Microbiology and Biotechnology</li>
+                    <li>Biochemical Engineering Journal</li>
+                    <li>Biotechnology Progress</li>
+                    <li>International Journal of Food Properties</li>
+                    <li>Journal of Food Engineering</li>
+                    <li>Journal of Food Science & Technology</li>
+                    <li>Journal of Thermal Analysis and Calorimetry</li>
+                    <li>Bioprocess and Biosystems Engineering</li>
+                    <li>CLEAN - Soil, Air, Water</li>
+                    <li>Environmental Science and Technology</li>
+                    <li>International Biodegradation & Biodeterioration</li>
+                    <li>Preparative Biochemistry and Biotechnology</li>
+                    <li>Water Science and Technology</li>
+                    <li>Microbial Cell Factories</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="middle-content">
+        <div class="academic-profile1"></div>
+        <img src="img/Title sir.png" alt="Academic Profile" class="academic-profile-image">
+        <h2 class="titleac">Academic Profile</h2>
+    </div>
+    <div class="academiccontent">
+        <ul class="academic-bullets">
+            <li>Ph.D - Biochemical Engineering Central Leather Research Institute, Chennai (2002 - 2007).</li>
+            <li>M.Tech - Chemical Engineering, Coimbatore Institute of Technology, Coimbatore, India. (2000 - 2002).</li>
+            <li>B.E - Chemical Engineering, Annamalai University, India (1996 - 2000).</li>
+        </ul>
+    </div>
+        <div class="middle-content1">
+            <div class="research-interest"></div>
+            <img src="img/Title sir.png" alt="Research interest" class="research-interest-image">
+            <h2 class="titleri">Research Interests</h2>
+        </div>
+        <div class="resintcontent">
+            <ul class="resint-bullets">
+                <li>Biocalorimetry (bench-scale and large-scale biocalorimeters).</li>
+                <li>Bio-Process Analytical Technology (BioPAT) (synthesis of recombinant proteins and value-added bioproducts).</li>
+                <li>Real-time monitoring and control of bioprocess systems (BioPAT) (Biocalorimetry, Dielectric Spectroscopy and Exhaust Gas Analyzer).</li>
+                <li>Monitoring and control of environmental bioprocess systems leading to value-added products.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="middle-content2">
+        <div class="Professional-experience"></div>
+        <img src="img/Title sir.png" alt="Academic Profile" class="Professional-experience-image">
+        <h2 class="titlepe">Professional Experience</h2>
+    </div>
+    <div class="profexpcontent">
+        <ul class="profexp-bullets">
+            <li>October 2021 onwards: Professor, Department of Biosciences and Bioengineering, Indian Institute of Technology Guwahati, Assam, India.</li>
+            <li>Nov 2016 - Sept 2021: Associate Professor, Department of Biosciences and Bioengineering, Indian Institute of Technology Guwahati, Assam, India.</li>
+            <li>June 2011 - November 2016: Assistant Professor, Biotechnology Department, Indian Institute of Technology, Guwahati, India.</li>
+            <li>Oct 2010 - May 2011: Research Assistant, Laboratory of Integrated Bioprocessing, Dublin City University (DCU), Ireland.</li>
+            <li>Sep 2008 - Sep 2010: IRCSET Post Doctoral Fellow, Laboratory of Integrated Bioprocessing, Dublin City University (DCU), Ireland.</li>
+            <li>Sep 2007 - April2008: AIST Post Doctoral Fellow, Environmental Science Centre, The University of Tokyo, Japan.</li>
+            <li>June 2007 - August 2007: Group Leader, API-Pilot Plant Division, Torrent Pharmaceuticals Ltd, Ahemedabad, India.</li>
+        </ul>
+    </div>
+    <div class="middle-content3">
+        <div class="Professional-affiliations"></div>
+        <img src="img/Title sir.png" alt="Academic Profile" class="Professional-affiliations-image">
+        <h2 class="titlepa">Professional Affiliations</h2>
+    </div>
+    <div class="profaffcontent">
+        <ul class="profaff-bullets">
+            <li>Member of International Society for Biological Calorimetry (ISBC)</li>
+            <li>Member of European Federation of Biotechnology (EFB).</li>
+            <li>Associate member of Indian Institute of Chemical Engineers (IIChe).</li>
+            <li>Working committee member at , BioProcess International (BPI).</li>
+            <li>Foundation member of Biological Engg.Society of India (BESI).</li>
+            <li>Associated Faculty, Centre for Sustainable Polymer at IIT Guwahati.</li>
+            <li>Associated Faculty, Centre for Environment, IIT Guwahati.</li>
+            <li>Guest Faculty, National Institute of Pharmaceutical Education & Research Guwahati (NIPER-G).</li>
+            <li>Associated Faculty, Joint Master/Ph.D International Degree Program on Food Science and Technology (IITG-GIFU University, Japan).</li>
+            <li>Member of Scientific Advisory Board, Ouija BioSolutions, Guwahati Biotech Park, IIT Guwahati, Assam.</li>
+        </ul>
+    </div>
+    <div class="middle-content4">
+        <div class="Awards-honors"></div>
+        <img src="img/Title sir.png" alt="Awards Honors" class="Awards-honors-image">
+        <h2 class="titleah">Awards & Honors</h2>
+        <h3 class="titlena">National</h3>
+        <h2 class="titlein">International</h2>
+    </div>
+    <div class="awahonnacontent">
+        <ul class="awahonna-bullets">
+            <li>Senior Research Fellowship of the Council for Scientific and Industrial Research, New Delhi, India (2003 to 2007)</li>
+            <li>Junior Research Fellowship of the University Grants Commission, New Delhi, India, 2002.</li>
+        </ul>
+    </div>
+    <div class="awahonincontent">
+        <ul class="awahonin-bullets">
+            <li>Irish Council for Scientific and Engineering and Technology (IRCSET) EMPOWER postdoctoral fellowship award (2008-2010)</li>
+            <li>Advanced Industrial Science and Technology (AIST) post doctoral research fellowship award, (2007-2008)</li>
+        </ul>
+    </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<script>
+    // Show Sidebar
+    function showSidebar(event) {
+        event.preventDefault(); // Prevent default action
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+    }
+  
+    // Hide Sidebar
+    function hideSidebar(event) {
+        event.preventDefault(); // Prevent default action
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+    }
+  
+    // Scroll functionality for Top Bar and Navbar
+    let lastScrollTop = 0;
+  
+    window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('navbar');
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+  
+        if (scrollY > 40) {
+            navbar.classList.add('scrolled'); // Add fixed navbar style
+        } else {
+            navbar.classList.remove('scrolled'); // Remove fixed navbar style
+        }
+  
+        lastScrollTop = scrollY; // Update scroll position
+    });
+  </script>
+  
+  <!--
+      
+        <script>
+          function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+          }
+          function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+          }
+        </script>
+      <!-- Navbar End -->
+  
+  
+  
+      <script>
+        let lastScrollTop = 0; // Store the previous scroll position
+      
+        window.addEventListener('scroll', function () {
+            const topBar = document.querySelector('.top-bar1');
+            const navbar = document.querySelector('nav');
+            let scrollY = window.scrollY || document.documentElement.scrollTop;
+      
+            // Hide Top Bar when scrolling down
+            if (scrollY > 50) {
+                topBar.classList.add('hidden');
+                navbar.classList.add('scrolled');
+            } else {
+                topBar.classList.remove('hidden');
+                navbar.classList.remove('scrolled');
+            }
+      
+            // Navbar reappears when scrolling up
+            if (scrollY < lastScrollTop) {
+                navbar.style.top = '0'; // Show navbar
+            } else {
+                navbar.style.top = '-100px'; // Slide up navbar
+            }
+      
+            lastScrollTop = scrollY; // Update the scroll position
+        });
+      </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+  

@@ -1,0 +1,1234 @@
+:root {
+    --primary: #0c0074;
+    --secondary: #757575;
+    --light: #F3F6F8;
+    --dark: #0C2B4B;
+
+ /* Dynamically adjusting heights */
+ --top-bar-height: clamp(40px, 5vw, 60px); /* Min 35px, responsive, max 60px */
+ --min-font-size: clamp(2vw, 2.2vw, 2.3vw);
+ --navbar-height: clamp(40px, 5vw, 60px);  /* Min 20px, responsive, max 50px */
+ --video-container-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+ --content-container-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+ --top-image-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+ --bottom-image-height: clamp(40px, 25vw, 500px); /* Min 400px, responsive, max 600px */
+ --footer-height:clamp(90px, 25vw, 700px);
+ --font-size:clamp(10px, 1.2vw, 30px);
+ --footer-title-font-size:clamp(30px, 3vw, 40px);
+ --footer-content-font-size:clamp(5px, 2vw, 20px);
+ --sirbar-height: clamp(22vw, 8vw, 19vw);
+
+
+
+
+
+
+ /* Responsive font sizes */
+ --font-size-desktop: clamp(14px, 1.5vw, 18px); /* Min 14px, responsive, max 18px */
+ --font-size-mobile: clamp(12px, 1.2vw, 16px);  /* Min 12px, responsive, max 16px */
+
+ /* Sidebar width responsive */
+ --sidebar-width: clamp(200px, 30vw, 250px); /* Min 200px, responsive, max 250px */
+}
+
+
+@font-face {
+    font-family: 'KC Obra Letra';
+    src: url('../font/subset-KCObraLetraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Beckman';
+    src: url('../font/subset-BeckmanFREE.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../font/subset-Lexend-Regular.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('../font/PlayfairDisplay-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Benedict';
+    src: url('../font/Benedict\ Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond'; /* Name of the font */
+    src: url('../font/EBGaramond08-Regular.woff') format('woff'); /* Path to the font file */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+    font-display: swap; /* Optional: Fallback text display while font loads */
+}
+@font-face {
+    font-family: 'Montserrat'; /* Name of the font */
+    src: url('../font/monserrat/Montserrat-Regular.woff') format('woff2'); /* Path to the font file */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+    font-display: swap; /* Optional: Fallback text display while font loads */
+}
+@font-face {
+    font-family: 'Tex-gyre'; /* Name of the font */
+    src: url('../font/monserrat/subset-TeXGyreTermes-Regular.woff2') format('woff2'); /* Path to the font file */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal; /* Specify the font style */
+}
+
+
+/* Set height for parent elements */
+html, body {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box;
+    font-family: garamond, sans-serif;
+}
+
+body {
+    font-family: 'KC Obra Letra', sans-serif;
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+}
+
+
+
+
+
+/* Top Bar */
+.top-bar1 {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    height: var(--top-bar-height); /* Dynamically adjust height */
+    width: 100%;
+    z-index: 1000;
+    transition: height 0.3s ease, opacity 0.5s ease, top 0.5s ease;
+}
+
+
+/* Top Bar Scroll Effect */
+.top-bar1.hidden {
+    opacity: 0;
+    top: -50px;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+
+/* Navbar Scroll Effect */
+nav.scrolled {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: top 0.5s ease, opacity 0.5s ease;
+    z-index: 10000;
+}
+
+.navbar-brand {
+    display: flex;
+    position: absolute;
+    max-height: var(--top-bar-height);
+    height: 100%;
+    width: auto;
+    white-space: nowrap;
+
+}
+/* Bioprocess Text */
+/* Bioprocess Text */
+.top-bar1 h21 {
+    font-family: "montserrat", sans-serif;
+    font-style: normal;
+    font-size: 2.3vw;
+    color: white;
+    align-self: center;
+    position: absolute;
+    margin-left: 23vw;
+    margin-right: 20vh;
+    box-sizing: border-box;
+}
+
+/* Hover Effect */
+.top-bar1:hover {
+    opacity: 0.8; /* Slightly fade on hover */
+}
+
+/* When scrolled */
+.top-bar1.scrolled {
+    opacity: 0.5;
+    top: -50px; /* Moves the bar upwards */
+}
+
+/* Hidden state for .top-bar */
+.hidden {
+    opacity: 0;
+    top: -50px;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+/*End of Top Bar*/
+
+
+
+/* Navigation Bar */
+nav {
+    position: relative; /* Fixed to ensure visibility when it reappears */
+    height: var(--navbar-height);
+    width: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99911;
+}
+
+/* Show Navigation Bar */
+nav.visible {
+    opacity: 1; /* Make visible */
+    pointer-events: auto; /* Enable interactions */
+    top: var(--top-bar-height); /* Fixed position below the top bar */
+}
+
+/* Navigation List */
+nav ul {
+    width: 100%; /* Full width */
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Align items horizontally */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navigation Items */
+nav li {
+    height: 40px; /* Match the height of the navbar */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center content vertically */
+}
+
+
+/* Navigation Links */
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    font-size: clamp(14px, 1.2vw, 18px); /* Responsive font size */
+    text-decoration: wavy; /* Remove underline */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center content vertically */
+    color: #0b088f;
+    transition: color 0.2s ease, background-color 0.2s ease; /* Smooth hover effect for color and background */
+    display: flex;
+    align-items: center;
+    color: black;
+}
+/* Active Link Styling */
+nav a.active {
+    color: #F3BD00; /* Change text color for active website button */
+    font-weight:lighter; 
+    text-decoration: none; /* Remove underline */
+    background-color: rgba(255, 255, 255, 0); /* Subtle background for active link */
+    transition: color 0.2s ease, background-color 0.2s ease; /* Smooth transition */
+}
+
+
+/* Hover Effect */
+nav a:hover {
+    text-decoration: wavy;
+    color: #F3BD00; /* Change text color */
+    background-color: #0C2B4B; /* Optional: Add a background color on hover */
+
+}
+
+nav li:first-child {
+    margin-right: 0; /* Push all other items to the right */
+}
+
+.sidebar{
+  position: fixed;
+  margin-top: var(--top-bar-height);
+  top: 0;
+  right: 0;
+  height: 240px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+  }
+.sidebar a{
+    width: 100%;
+  }
+
+  .menu-button{
+    display: none;
+  }
+  @media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Content Container */
+.content-container {
+    position: relative; /* Ensures child elements are positioned relative to this container */
+    width: 100%;
+    height: var(--sirbar-height);
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-bottom: #ffd500 solid 2px;
+}
+.responsive-image {
+    position: relative; /* Ensures child elements are positioned relative to this container */
+    width: 100%;
+    height:100%;
+}
+.logo-image{
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    height: 35%;
+}
+.sir-image{
+    position: absolute;
+    top: 14%;
+    right: 5%;
+    height: 75%;
+    width: 16%;
+    border-radius: 4%;
+    border: #000000 solid 2px;
+    box-shadow: #000000 0px 0px 20px;
+}
+
+
+
+/* Caption Container */
+.image-caption {
+    position: absolute; /* Position it relative to the content container */
+    top: 17%; /* Center vertically */
+    left: 17%; /* Center horizontally */
+    text-align: center;
+    z-index: 2; /* Ensure it appears above the image */
+    color: white; /* Text color */
+}
+/* Caption Text Styling */
+.image-caption h1{
+    font-family: "Tex_gyre"; /* Fallback to sans-serif if font unavailable */
+    font-weight: normal;
+    font-size: 2.5vw; /* Adjust size based on your design */
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Add a shadow for better contrast */
+    margin: 0; /* Remove unnecessary margin */
+    display:flex;
+    align-items: flex-start;
+}
+.image-caption h2{
+    font-family: "Tex_gyre"; /* Fallback to sans-serif if font unavailable */
+    font-weight: normal;
+    font-size: 2vw; /* Adjust size based on your design */
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Add a shadow for better contrast */
+    margin: 0; /* Remove unnecessary margin */
+    display:flex;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+.image-caption h3{
+    font-family: "Tex_gyre"; /* Fallback to sans-serif if font unavailable */
+    font-weight: normal;
+    font-size: 2vw; /* Adjust size based on your design */
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Add a shadow for better contrast */
+    margin: 0; /* Remove unnecessary margin */
+    display:flex;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+.image-caption h4  {
+    line-height: 1.5;
+    margin-top: 0px; /* Remove unnecessary margin */
+}
+.image-caption h4 a  {
+    font-family: "Tex_gyre";
+    font-weight: normal;
+    font-size: 2vw;
+
+    color: #F3BD00; /* Set color for h4 */
+    text-decoration:wavy;
+
+    display: flex;
+    align-items: flex-start;
+    margin-top: 0px; /* Remove unnecessary margin */
+}
+
+
+
+
+
+
+@media(max-width: 800px){
+    .content-container{
+        flex-direction: column;
+        height: 25vw;
+    }
+    .responsive-image {
+        position: relative; /* Ensures child elements are positioned relative to this container */
+        width: 100%;
+        height:100%;
+    }
+    .logo-image{
+        position: absolute;
+        top: 19%;
+        left: 8%;
+        height: 35%;
+    }
+    .sir-image{
+        position: absolute;
+        top: 12%;
+        right: 5%;
+        height: 70%;
+        width: 16.5%;
+        border-radius: 4%;
+        box-shadow: #000000 3px 3px 20px;
+    } 
+/* Caption Container */
+.image-caption {
+    position: absolute; /* Position it relative to the content container */
+
+    z-index: 2; /* Ensure it appears above the image */
+    color: white; /* Text color */
+}
+}
+
+.content-part{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #b80000;
+
+}
+
+/* Sidebar Container */
+.columnsidebar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align items to the start (left) */
+    width: 24%;
+    height: 100%;
+    background-color: #002b36;
+    box-sizing: border-box;
+    padding: 0; /* Remove padding for a clean alignment */
+}
+
+/* Sidebar Image */
+.side-img {
+    width: 100%; /* Image takes full width */
+    height: auto;
+    border-right: #ffd500 solid 2px; /* Yellow border */
+    background-color: #000;
+}
+
+/* Contact Caption */
+.image-caption1 {
+    position: absolute; /* Position the caption over the image */
+    top: 0; /* Place at the top */
+    left: 0; /* Align to the left */
+    color: white; /* Ensure text is visible */
+    width: 100%; /* Take full width of the container */
+    padding: 10px; /* Add some spacing inside */
+    box-sizing: border-box;
+    background-color: #021c40;
+    border-right: #ffd500 solid 2px ;
+    height: 1960px;
+}
+
+/* Contact Heading */
+
+.image-caption1 h5 {
+        font-family: "Tex_gyre";
+        font-weight: normal;
+        font-size: 2vw;
+        color: #F3BD00;
+        
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        margin: 10px 0; /* Reduce space above and below */
+        margin-left:1%;
+        padding: 0; /* Remove any extra padding */
+    }
+
+/* Contact List */
+.image-caption1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Make the list responsive within the caption */
+}
+
+/* List Items */
+.image-caption1 ul li {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 1vw; /* Set consistent font size */
+    line-height: 1.4;
+}
+
+.image-caption1 .location1 {
+    width: 25px;
+    height: 32px;
+    margin-right: 12.3px; /* Space between icon and text */
+    margin-left: 5.5px;
+}
+/* Icons */
+.image-caption1 .gmailicon{
+    width: 25px;
+    height: 20px;
+    margin-right: 10px; /* Space between icon and text */
+    margin-left: 3px;
+}
+.image-caption1 .phoneicon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px; /* Space between icon and text */
+    margin-left: 3px;
+}
+.image-caption1 .faxicon {
+    width: 25px;
+    height: 20px;
+    margin-right: 10px; /* Space between icon and text */
+    margin-left: 3px;
+}
+
+
+/* Anchor Links */
+.image-caption1 a {
+    text-decoration: none;
+    color: #fafafa;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.image-caption1 a:hover {
+    color: #06eeff; /* Yellow on hover */
+}
+
+.image-caption1 a:active {
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF;
+    color: #00FFFF;
+}
+
+.image-caption11 h6 {
+    font-family: "Tex_gyre";
+    font-weight: normal;
+    font-size: 2vw;
+    color: #F3BD00;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    margin: 10px 0; /* Reduce space above and below */
+    margin-left:1%;
+    margin-top: 10%;
+    padding: 0; /* Remove any extra padding */
+    list-style: disc; /* Adds bullet points */
+}
+
+
+.image-caption11 ul {
+    list-style: disc; /* Adds bullet points */
+    line-height: 1.6; /* Space between lines for better readability */
+ 
+}
+
+.image-caption11 ul li {
+    margin-bottom: 5px; /* Space between items */
+    margin-left: 2.3%;
+    font-size: 1vw;
+}
+
+.image-caption111 h2 {
+    font-family: "Tex_gyre";
+    font-weight: normal;
+    font-size: 2vw;
+    color: #F3BD00;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    margin: 10px 0; /* Reduce space above and below */
+    margin-left:1%;
+    margin-top: 10%;
+    padding: 0; /* Remove any extra padding */
+    list-style: disc; /* Adds bullet points */
+}
+
+
+.image-caption111 .my-specific-list {
+    list-style: disc !important; 
+}
+
+.image-caption111 ul li {
+    margin-bottom: 5px; /* Space between items */
+    margin-left: 2.3%;
+    font-size: 1vw;
+}
+
+.image-caption111 ul li::marker {
+    color: #08d3f3; /* Change this to your desired color */
+  }
+
+
+  /* Sidebar Container */
+.middle-content {
+    position: absolute;
+    display: flex;
+    margin-left: 24%;
+    width: 76%;
+
+    box-sizing: border-box;
+    padding: 0; /* Remove padding for a clean alignment */
+
+}
+
+.academic-profile1 {
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    display: flex;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(143, 143, 143));
+}
+
+.academic-profile-image {
+    width: 100%;
+    height: 4vw;
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+    display: block;
+    position: absolute;
+
+}
+
+.titleac {
+    position: absolute; /* Position relative to the parent container */
+    font-family: 'Tex-gyre';
+    margin-left: 38%; /* Move to the horizontal center */
+    margin-top: 0.5%;
+    margin-bottom: 0px;
+    z-index: 10; /* Ensure it appears above the image */
+    color: black; /* Text color */
+    font-size: 2.5vw; /* Adjust font size as needed */
+    font-weight: normal;
+    text-align: center;
+    
+}
+/* Styling for Academic Profile Section */
+
+
+.academic-bullets {
+    position: absolute;
+    list-style-type: disc; /* Bullet points */
+    padding: 0;
+    margin-left: 32.5%;
+    font-size: 1.2vw; /* Adjust font size as needed */
+    margin-right: 4%;
+    margin-top: 5.5%;
+    color: #000000; /* Text color */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+.academic-bullets li {
+    margin-bottom: 10px; /* Add space between bullet points */
+}
+
+
+
+  /* Sidebar Container */
+.middle-content1 {
+    position: absolute;
+    display: flex;
+    margin-top: 15%;
+    margin-left: 24%;
+    width: 76%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0; /* Remove padding for a clean alignment */
+}
+
+
+
+.research-interest-image {
+    width: 100%;
+    height: 4vw;
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+    display: block;
+    position: absolute;
+}
+
+.titleri {
+    position: absolute; /* Position relative to the parent container */
+    font-family: 'Tex-gyre';
+    margin-left: 38%; /* Move to the horizontal center */
+    margin-top: 0.5%;
+    margin-bottom: 0px;
+    z-index: 10; /* Ensure it appears above the image */
+    color: black; /* Text color */
+    font-size: 2.5vw; /* Adjust font size as needed */
+    font-weight: normal;
+    text-align: center;
+    
+}
+.resintcontent{
+    position: absolute;
+    margin-left: 32.5%;
+    margin-top: 19.152%;
+    display: flex;
+}
+.resint-bullets {
+    position: relative;
+    list-style-type: disc; /* Bullet points */
+    margin-right: 4%;
+    padding: 0;
+    font-size: 1.2vw; /* Adjust font size as needed */
+    color: #000000; /* Text color */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+.resint-bullets li {
+    margin-bottom: 10px; /* Add space between bullet points */
+}
+
+  /* Sidebar Container */
+  .middle-content2 {
+    position: absolute;
+    display: flex;
+    margin-top: 59.5%;
+    margin-left: 24%;
+    width: 76%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0; /* Remove padding for a clean alignment */
+}
+
+
+
+.Professional-experience-image {
+    width: 100%;
+    height: 4vw;
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+    display: block;
+    position: absolute;
+}
+
+.titlepe {
+    position: absolute; /* Position relative to the parent container */
+    font-family: 'Tex-gyre';
+    margin-left: 38%; /* Move to the horizontal center */
+    margin-top: 0.5%;
+    margin-bottom: 0px;
+    z-index: 10; /* Ensure it appears above the image */
+    color: black; /* Text color */
+    font-size: 2.5vw; /* Adjust font size as needed */
+    font-weight: normal;
+    text-align: center;
+}
+.profexpcontent{
+    position: absolute;
+    margin-left: 32.5%;
+    margin-top: 63.55%;
+    display: flex;
+}
+.profexp-bullets {
+    position: relative;
+    list-style-type: disc; /* Bullet points */
+    margin-right: 4%;
+    padding: 0;
+    font-size: 1.2vw; /* Adjust font size as needed */
+    color: #000000; /* Text color */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+.profexp-bullets li {
+    margin-bottom: 10px; /* Add space between bullet points */
+}
+
+
+
+
+
+  /* Sidebar Container */
+  .middle-content3 {
+    position: absolute;
+    display: flex;
+    margin-top: 91%;
+    margin-left: 24%;
+    width: 76%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0; /* Remove padding for a clean alignment */
+}
+
+
+
+.Professional-affiliations-image {
+    width: 100%;
+    height: 4vw;
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+    display: block;
+    position: absolute;
+}
+
+.titlepa {
+    position: absolute; /* Position relative to the parent container */
+    font-family: 'Tex-gyre';
+    margin-left: 38%; /* Move to the horizontal center */
+    margin-top: 0.5%;
+    margin-bottom: 0px;
+    z-index: 10; /* Ensure it appears above the image */
+    color: black; /* Text color */
+    font-size: 2.5vw; /* Adjust font size as needed */
+    font-weight: normal;
+    text-align: center;
+}
+.profaffcontent{
+    position: absolute;
+    margin-left: 32.5%;
+    margin-top: 95.9%;
+    display: flex;
+}
+.profaff-bullets {
+    position: relative;
+    list-style-type: disc; /* Bullet points */
+    margin-right: 4%;
+    padding: 0;
+    font-size: 1.2vw; /* Adjust font size as needed */
+    color: #000000; /* Text color */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+.profaff-bullets li {
+    margin-bottom: 10px; /* Add space between bullet points */
+}
+
+
+  /* Sidebar Container */
+  .middle-content4 {
+    position: absolute;
+    display: flex;
+    margin-top: 125.5%;
+    margin-left: 24%;
+    width: 76%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0; /* Remove padding for a clean alignment */
+}
+
+
+
+.Awards-honors-image {
+    width: 100%;
+    height: 4vw;
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+    display: block;
+    position: absolute;
+}
+
+.titleah {
+    position: absolute; /* Position relative to the parent container */
+    font-family: 'Tex-gyre';
+    margin-left: 38%; /* Move to the horizontal center */
+    margin-top: 0.5%;
+    margin-bottom: 0px;
+    z-index: 10; /* Ensure it appears above the image */
+    color: black; /* Text color */
+    font-size: 2.5vw; /* Adjust font size as needed */
+    font-weight: normal;
+    text-align: center;
+}
+.titlena{
+    position: absolute; /* Position relative to the parent container */
+    font-family: 'Tex-gyre';
+    margin-top: 8.5%;
+    font-size: 2vw; /* Adjust font size as needed */
+}
+.awahonnacontent {
+    position: absolute;
+    margin-left: 32.5%;
+    margin-top: 133.9%;
+    display: flex;
+}
+.awahonna-bullets {
+    position: relative;
+    list-style-type: disc; /* Bullet points */
+    margin-right: 4%;
+    padding: 0;
+    font-size: 1.2vw; /* Adjust font size as needed */
+    color: #000000; /* Text color */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+.awahonna-bullets li {
+    margin-bottom: 10px; /* Add space between bullet points */
+}
+
+.titlein{
+    position: absolute; /* Position relative to the parent container */
+    font-family: 'Tex-gyre';
+    margin-top: 23%;
+    font-size: 2vw; /* Adjust font size as needed */
+}
+
+.awahonincontent {
+    position: absolute;
+    margin-left: 32.5%;
+    margin-top: 145.4%;
+    display: flex;
+}
+.awahonin-bullets {
+    position: relative;
+    list-style-type: disc; /* Bullet points */
+    margin-right: 4%;
+    padding: 0;
+    font-size: 1.2vw; /* Adjust font size as needed */
+    color: #000000; /* Text color */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+.awahonin-bullets li {
+    margin-bottom: 10px; /* Add space between bullet points */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.profaffcontent{
+    position: absolute;
+    margin-left: 29%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    margin-right: 4%;
+}
+.profaff-bullets {
+    position: relative;
+    list-style-type: disc; /* Bullet points */
+    margin: 20px 0 0 30px; /* Add spacing and indentation */
+    padding: 0;
+    font-size: 1.2vw; /* Adjust font size as needed */
+    color: #000000; /* Text color */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+/.profa/ff-bullets li {
+    margin-bottom: 10px; /* Add space between bullet points */
+}
+/
+.awa/honcontent{
+    position: absolute;
+    margin-left: 29%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    margin-right: 4%;
+}
+.awa/hon-bullets {
+    position: relative;
+    list-style-type: disc; /* Bullet points */
+    margin: 20px 0 0 30px; /* Add spacing and indentation */
+    padding: 0;
+    font-size: 1.2vw; /* Adjust font size as needed */
+    color: #000000; /* Text color */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+.awa/hon-bullets li {
+    margin-bottom: 10px; /* Add space between bullet points */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+/*
+.content-sir{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #838383, #dfdede);
+    overflow: hidden;
+}
+
+.sideimg{
+    position: relative;
+    height: 100%;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    border-right: #ffd500 solid 2px;
+}
+
+.sideimage-captionzz
+
+
+
+
+
+
+
+
+
+
+<!-- Sir Content End -->
+<div class="content-sir">
+<div class="side-bar-content">
+    <img class="sideimg" src="img/side_picture.png">
+    <div class="sideimage-caption">
+    <h5>Contact</h5>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main Container */
+.bioreactor-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1e1e1e, #3a3a3a);
+    overflow: hidden;
+}
+
+/* Bioreactor */
+.bioreactor {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 200px;
+    height: 400px;
+    background-color: #404040;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #000;
+}
+
+.reactor-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Bacteria Animation */
+.bacteria {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #00ff00, transparent);
+    animation: bacteria-move 4s infinite ease-in-out;
+}
+
+@keyframes bacteria-move {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Pipe */
+.pipe {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 50%;
+    height: 20px;
+    background: linear-gradient(to right, #9b9b9b, #5c5c5c);
+    border: 3px solid #333;
+    box-shadow: 0 0 10px #555;
+}
+
+/* Parameters */
+.parameters {
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-box {
+    background: #ffdd57;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    color: #333;
+}
+
+/* Pressure Gauge */
+.pressure-gauge {
+    position: absolute;
+    bottom: 20%;
+    left: 60%;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #444;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: inset 0 0 10px #000;
+}
+
+.needle {
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background: red;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-out;
+}
